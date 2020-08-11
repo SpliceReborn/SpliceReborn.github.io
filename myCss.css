@@ -1,28 +1,30 @@
 .container {
-  height: 97vh;
+  margin: 15vh 20% 15vh 20%;
+  height: 70vh;
+  width: 60%;
   display: flex;
   flex-flow: row;
   justify-content: center; /*horizontal center*/
   align-items: center;
   background-image: url(Edited.png);
-  background-size: 60vw 80vh;
   background-repeat: no-repeat;
   background-position: center;
+  background-attachment: fixed;
 }
 
 .outerItem {
-  width: 50vw;
-  height: 77vh;
-  padding: 50px 30px 0px 30px;
+  width: 30%;
+  height: 70vh;
+  padding: 0px 30px 0px 30px;
 }
 
 .innerItem {
   text-align: right;
 }
 
-h1 {
+/*h1 {
   padding-top:180px;
-}
+}*/
 
 /* unvisited link
 a:link {
