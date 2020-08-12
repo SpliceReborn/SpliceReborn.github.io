@@ -5,6 +5,33 @@
         <title>Darren Seet</title>
         <link rel="stylesheet" href="myCss.css" type="text/css">
         <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+        <!-- JQuery resources -->
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+        <!-- Jquery dialog -->
+        <script>
+            $( function() {
+              $( "#dialog" ).dialog({
+                autoOpen: false,
+                show: {
+                  effect: "blind",
+                  duration: 500
+                },
+                hide: {
+                  effect: "explode",
+                  duration: 500
+                }
+              });
+
+              $( "#opener" ).on( "click", function() {
+                $( "#dialog" ).dialog( "open" );
+              });
+            } );
+        </script>
+
     </head>
 
     <body>
@@ -15,8 +42,8 @@
                 <div class ="innerItem"><p>Student of Computer Science</p></div>
 
                 <div class ="innerItem">
-                    <button><a href="https://darrenseet.com/random.html">About</a></button>
-                    <button>Contact</button>
+                    <button class = "btn"><a href="#">About</a></button>
+                    <button class = "btn" id="opener">Contact</button>
                 </div>
             </div>
 
@@ -26,10 +53,16 @@
 
         </div>
 
+        <div id="dialog" title="Contact me via">
+              <a href="https://twitter.com/SpliceReborn" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/color/48/000000/twitter.png" style="width:20px;height:20px;">Twitter</a>
+              <a href="https://www.youtube.com/channel/UChUPaeDHG446TWl3As0pQiQ" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/fluent/48/000000/youtube-play.png" style="width:20px;height:20px;">Youtube</a>
+              <a href="https://www.facebook.com/darren.seet.104" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/fluent/48/000000/facebook-new.png" style="width:20px;height:20px;">Facebook</a>
+        </div>
+
         <!--
         <div id="bottom">
             <p>Contact me via <a href="mailto:7072070@gmail.com?subject=Feedback&nbsp;for&nbsp;site">email</a> to provide feedback on how I can improve my site! Your time is appreciated!</p>
-            <p>You can also drop me a message or tweet on <a href="https://twitter.com/SpliceReborn"><img src="https://img.icons8.com/color/48/000000/twitter.png" style="width:20px;height:20px;"></a>
+            <p>You can also drop me a message or tweet on
         </div>
         -->
 
