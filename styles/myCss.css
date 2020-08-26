@@ -6,7 +6,7 @@
   flex-flow: row;
   justify-content: space-around; /*horizontal center*/
   align-items: center;
-  background-image: url(Edited.png);
+  background-image: url(../images/Edited.png);
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
