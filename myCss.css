@@ -71,7 +71,7 @@ img {
   padding-left: 10px;
 }
 
-#dialog {
+.dialog {
   display: flex;
   flex-direction: row;
   align-items: center;

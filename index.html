@@ -14,7 +14,7 @@
         <!-- Jquery dialog -->
         <script>
             $( function() {
-              $( "#dialog" ).dialog({
+              $( "#contactDialog" ).dialog({
                 autoOpen: false,
                 show: {
                   effect: "blind",
@@ -26,9 +26,28 @@
                 }
               });
 
-              $( "#opener" ).on( "click", function() {
-                $( "#dialog" ).dialog("option", "width", 500);
-                $( "#dialog" ).dialog( "open" );
+              $( "#contactOpener" ).on( "click", function() {
+                $( "#contactDialog" ).dialog("option", "width", 500);
+                $( "#contactDialog" ).dialog( "open" );
+              });
+            } );
+
+            $( function() {
+              $( "#aboutDialog" ).dialog({
+                autoOpen: false,
+                show: {
+                  effect: "blind",
+                  duration: 500
+                },
+                hide: {
+                  effect: "explode",
+                  duration: 500
+                }
+              });
+
+              $( "#aboutOpener" ).on( "click", function() {
+                $( "#aboutDialog" ).dialog("option", "width", 500);
+                $( "#aboutDialog" ).dialog( "open" );
               });
             } );
         </script>
@@ -43,8 +62,8 @@
                 <div class ="innerItem"><p>Student of Computer Science</p></div>
 
                 <div class ="innerItem">
-                    <button class = "btn"><a href="#">About</a></button>
-                    <button class = "btn" id="opener">Contact</button>
+                    <button class = "btn" id="aboutOpener">About</button>
+                    <button class = "btn" id="contactOpener">Contact</button>
                 </div>
             </div>
 
@@ -54,7 +73,7 @@
 
         </div>
 
-        <div id="dialog" title="Contact me via">
+        <div id="contactDialog" title="Contact me via" class="dialog">
               <a href="https://twitter.com/SpliceReborn" target="_blank" rel="noopener noreferrer"><img src="icons/twitter.svg" style="width:20px;height:18px;">Twitter</a>
               <a href="https://www.youtube.com/channel/UChUPaeDHG446TWl3As0pQiQ" target="_blank" rel="noopener noreferrer"><img src="icons/youtube.svg" style="width:24px;height:20px;">Youtube</a>
               <a href="https://www.facebook.com/darren.seet.104" target="_blank" rel="noopener noreferrer"><img src="icons/facebook.svg" style="width:20px;height:18px;">Facebook</a>
@@ -62,6 +81,25 @@
               <a href="https://www.carousell.com.my/lyvcs/"><img src="icons/carousell.png" style="width:20px;height:20px;">Carousell</a>
         </div>
 
+        <div id="aboutDialog" title="About me" class="dialog">
+            <ul>
+                <li>Age 20 full time student who trades for a hobby</li>
+                <br>
+                <li>BCs Computer Science at University of Warwick (2019-2022)</li>
+                <br>
+                <li>A*AAB in Maths, Further Maths, Physics, and Economics in A Levels</li>
+                <br>
+                <li>Soon to be proficient in
+                    <ul>
+                        <li>Java</li>
+                        <li>HTML, Css, Javascript</li>
+                        <li>Algorithms</li>
+                        <li><a href="https://github.com/SpliceReborn">Git</a></li>
+                        <li>Command line</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
         <!--
         <div id="bottom">
             <p>Contact me via <a href="mailto:7072070@gmail.com?subject=Feedback&nbsp;for&nbsp;site">email</a> to provide feedback on how I can improve my site! Your time is appreciated!</p>
