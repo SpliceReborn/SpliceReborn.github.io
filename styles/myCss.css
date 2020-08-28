@@ -25,6 +25,7 @@
 .outerItem2 {
   width: 30%;
   height: 70vh;
+  height: calc(var(--vh, 1vh) * 70);
   display: flex;
   flex-flow: column;
   justify-content: center;
