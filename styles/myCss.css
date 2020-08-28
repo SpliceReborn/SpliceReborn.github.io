@@ -31,20 +31,6 @@
   align-items: flex-end;
 }
 
-.innerItem2 {
-  text-align: right;
-  font-size: 10px;
-  width:30%;
-  border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 1px 5px;
-}
-
-.innerItem2 a {
-  color: white;
-}
-
 .btn {
   background-color: #f1f1f1;
   color: black;
