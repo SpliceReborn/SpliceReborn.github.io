@@ -1,7 +1,7 @@
 @viewport {
   width: device-width ;
   zoom: 1.0 ;
-} 
+}
 
 .container {
   margin: 15vh auto;
@@ -52,9 +52,8 @@
   background-color: #75eaff;
 }
 
-img {
-  vertical-align: bottom;
-  padding-left: 10px;
+h1, h2 {
+  font-family: 'Source Code Pro', monospace;
 }
 
 .dialog {
@@ -62,6 +61,11 @@ img {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+
+.dialog img {
+  vertical-align: bottom;
+  padding-left: 10px;
 }
 
 /*h1 {
