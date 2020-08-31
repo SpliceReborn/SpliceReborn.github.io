@@ -68,27 +68,7 @@ h1, h2 {
   padding-left: 10px;
 }
 
-/*h1 {
-  padding-top:180px;
-}*/
-
-/* unvisited link
-a:link {
-    color: #6bcf96;
+.link-noStyle {
+  text-decoration:none;
+  color: #0099ff;
 }
-
-/* visited link
-a:visited {
-    color: #0dd9d5;
-}
-
-/* mouse over link
-a:hover {
-    color: #00913d;
-}
-
-/* selected link
-a:active {
-    color: #aef5cc;
-}
-*/
