@@ -72,7 +72,7 @@ a > img {
   padding-left: 10px;
 }
 
-.link-noStyle {
+#link-noStyle {
   text-decoration:none;
   color: #0099ff;
 }
