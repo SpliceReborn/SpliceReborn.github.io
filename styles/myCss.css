@@ -4,9 +4,9 @@
 }
 
 .container {
-  margin: 15vh auto;
-  height: 70vh;
-  width: 70%;
+  height: 60vh;
+  height: calc(var(--vh, 1vh) * 98);
+  width: 100%;
   display: flex;
   flex-flow: row;
   justify-content: space-around; /*horizontal center*/
@@ -23,18 +23,22 @@
 
 .innerItem {
   text-align: center;
-  /*background-color: lightcoral;*/
   margin-top: 10px;
 }
 
 .outerItem2 {
   width: 30%;
-  height: 70vh;
-  height: calc(var(--vh, 1vh) * 70);
+  height: 60vh;
+  height: calc(var(--vh, 1vh) * 98);
   display: flex;
   flex-flow: column;
   justify-content: center;
-  align-items: flex-end;
+  background-color:lightcoral;
+}
+
+div > img {
+  width: 100%;
+  border-radius: 50%;
 }
 
 .btn {
@@ -63,7 +67,7 @@ h1, h2 {
   justify-content: center;
 }
 
-.dialog img {
+a > img {
   vertical-align: bottom;
   padding-left: 10px;
 }
