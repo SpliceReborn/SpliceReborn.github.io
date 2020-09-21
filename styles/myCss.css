@@ -3,24 +3,30 @@
   zoom: 1.0 ;
 }
 
-@media (min-width:392px) and (max-width:1024px) {
+@media (min-width:392px) and (max-width:825px) {
+
+  body {
+    overflow:hidden;
+  }
   .container {
+      height: 100vh;
       display: flex;
-      flex-flow: row;
+      flex-direction: row;
       align-items: center;
   }
 
   .outerItem {
+    width: 100%;
     position:absolute;
     z-index: 1;
     display: flex;
-    flex-flow: column;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .outerItem2{
     z-index: 0;
-    opacity: 30%;
+    opacity: 40%;
   }
 
   .innerItem {
@@ -68,7 +74,7 @@
   }
 }
 
-@media (min-width:1025px) {
+@media (min-width:826px) {
   .container {
     height: 60vh;
     height: calc(var(--vh, 1vh) * 98);
