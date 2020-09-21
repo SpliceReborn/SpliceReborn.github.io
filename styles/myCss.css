@@ -5,12 +5,8 @@
 
 @media (min-width:392px) and (max-width:1024px) {
   .container {
-      width: 100%;
-      height: 98vh;
-      position: relative;
       display: flex;
       flex-flow: row;
-      justify-content: center; /*horizontal center*/
       align-items: center;
   }
 
@@ -20,16 +16,11 @@
     display: flex;
     flex-flow: column;
     justify-content: center;
-    top: 50%;
-    transform: translateY(-50%);
   }
 
   .outerItem2{
-    position: relative;
     z-index: 0;
     opacity: 30%;
-    top: 50%;
-    transform: translateY(-50%);
   }
 
   .innerItem {
