@@ -3,13 +3,9 @@
   zoom: 1.0 ;
 }
 
-@media (min-width:392px) and (max-width:825px) {
-
-  body {
-    overflow:hidden;
-  }
+@media (orientation: portrait) and (min-width:392px) {
   .container {
-      height: 100vh;
+      height: 96vh;
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -74,9 +70,8 @@
   }
 }
 
-@media (min-width:826px) {
+@media (orientation: landscape) {
   .container {
-    height: 60vh;
     height: calc(var(--vh, 1vh) * 98);
     width: 100%;
     display: flex;
