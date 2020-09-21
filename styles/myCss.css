@@ -22,7 +22,7 @@
 
   .outerItem2{
     z-index: 0;
-    opacity: 40%;
+    opacity: 100%;
   }
 
   .innerItem {
@@ -39,11 +39,11 @@
     cursor: pointer;
     border-radius: 50px;
     text-align: center;
-    opacity: 80%;
+    opacity: 90%;
   }
 
   .btn:hover {
-    background-color: #ccf2ff;
+    background-color: #57fab6;
     opacity: 100%;
   }
 
@@ -53,14 +53,16 @@
   }
 
   h1, h2 {
-    padding: 0px 10px 0 10px;
-    color: #ccffcc;
+    padding: 0 10px 0 10px;
+    color: #38e3e8;
     font-family: 'Source Code Pro', monospace;
   }
 
+  h1 {
+    padding-top: 2.5em;
+  }
   a {
-    text-decoration: none;
-    color:#ccffcc;
+    color:#38e3e8;
   }
 
   a > img {
