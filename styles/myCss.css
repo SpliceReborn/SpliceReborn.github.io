@@ -3,6 +3,10 @@
   zoom: 1.0 ;
 }
 
+* {
+ box-sizing: border-box;
+}
+
 @media (orientation: portrait) and (min-width:392px) {
   .container {
       height: 96vh;
