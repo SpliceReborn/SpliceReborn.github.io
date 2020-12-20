@@ -2,121 +2,108 @@
 <html lang = "en">
     <head>
         <meta charset="utf-8">
-        <meta name="description" content="Darren Seet - Freelance Full Stack Web Developer available for hire">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Darren Seet - Computer Science Undergraduate">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Darren Seet, Aspiring Full Stack Web Developer</title>
+        <title>Darren Seet, Computer Science Undergraduate</title>
 
         <link rel="stylesheet" href="styles/myCss.css" type="text/css">
         <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-        <!-- Source Code Pro font link -->
+        <!-- font link -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
-
-        <!-- JQuery resources -->
-        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
-        <!-- Jquery dialog -->
-        <script>
-            $( function() {
-              $( "#contactDialog" ).dialog({
-                autoOpen: false,
-                show: {
-                  effect: "blind",
-                  duration: 500
-                },
-                hide: {
-                  effect: "explode",
-                  duration: 500
-                }
-              });
-
-              $( "#contactOpener" ).on( "click", function() {
-                $( "#contactDialog" ).dialog("option", "width", 400);
-                $( "#contactDialog" ).dialog("option", "height", 190);
-                $( "#contactDialog" ).dialog( "open" );
-              });
-            } );
-
-            $( function() {
-              $( "#aboutDialog" ).dialog({
-                autoOpen: false,
-                show: {
-                  effect: "blind",
-                  duration: 500
-                },
-                hide: {
-                  effect: "explode",
-                  duration: 500
-                }
-              });
-
-              $( "#aboutOpener" ).on( "click", function() {
-                $( "#aboutDialog" ).dialog("option", "width", 520);
-                $( "#aboutDialog" ).dialog( "open" );
-              });
-            } );
-        </script>
-
-        <script>
-            // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-            let vh = window.innerHeight * 0.01;
-            // Then we set the value in the --vh custom property to the root of the document
-            document.documentElement.style.setProperty('--vh', `${vh}px`);
-        </script>
-
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
     </head>
 
     <body>
-        <main>
-            <div class="container">
-                <div class ="outerItem">
-                    <div class ="innerItem"><h1>Darren Seet</h1></div>
-                    <div class ="innerItem"><h2>Currently working on <a href="https://automatetheboringstuff.com/" target="_blank" rel="noopener">Automate The Boring Stuff With Python by Al Sweigart</a></h2></div>
-                    <div class ="innerItem"><h2>Looking to get a Raspberry Pi in the near future for projects exploration</h2></div>
-
-                    <div class ="innerItem">
-                        <button class = "btn" id="aboutOpener">About</button>
-                        <button class = "btn" id="contactOpener">Contact</button>
-                        <a href="https://paypal.me/darrenSeet" class="btn" id="link-noStyle" target="_blank" rel="noopener noreferrer">Donate!</a>
-                        <a href="#" class="btn" id="link-noStyle" rel="noopener noreferrer">Blog</a>
-                    </div>
-                </div>
-
-                <div class="outerItem2">
-                    <img src="images/portrait.jpg" alt="image of Darren Seet">
-                </div>
-
+      <main>
+        <div class="landingContainer">
+          <h1>Need a freelance developer?</h1>
+          <p>Hey, I'm Darren Seet. I love to learn and accept new challenges.</p>
+        </div>
+      </main>
+      <article>
+        <div class="aboutContainer">
+          <div class="aboutText">
+            <h2>About me</h2>
+            <p>I'm a Computer Science undergraduate student at the University of Warwick (2019-2022). I have programmed in Java, C, Haskell and Python to complete the university's courseworks.</p>
+            <p>This site you are currently on is written by me in HTML and CSS. I'm learning Javascript at the moment, and plan to dive into embedded systems some time in soon. </p>
+          </div>
+          <div class="aboutImage">
+            <img src="images/portrait.jpg" alt="Darren Seet with a burger">
+          </div>
+        </div>
+      </article>
+      <nav>
+        <div class="landingContainer">
+          <div class="navContainer">
+            <h3>Want to know more? <br> Just follow the 4 steps below.</h3>
+            <hr>
+            <div class="row">
+              <div class="col">
+                <h4>Step #1</h4>
+                <!-- style="padding: 2em 0;" to be removed in the future when <p> text gets longer-->
+                <p style="padding: 2em 0;">Resume is a work in progress.</p>
+                <a href="#" class="btn">Resume</a>
+              </div>
+              <div class="col">
+                <h4>Step #2</h4>
+                <p>I'm planning on putting up a blog soon where I'll write about a broad range of topics such as:</p>
+                <p>(1) my daily life, (2) books I've read, (3) things I've learned, etc. Stay tuned!</p>
+                <a href="#" class="btn">Blog</a>
+              </div>
             </div>
-        </main>
-
-        <div id="contactDialog" title="Contact me via" class="dialog">
-            <a href="https://github.com/SpliceReborn" target="_blank" rel="noopener"><img src="images/icons/Octocat.jpg" style="width:20px; height:20px;">Github</a>
-            <a href="https://www.linkedin.com/in/darren-seet-73a004129/" target="_blank" rel="noopener"><img src="images/icons/linkedin.svg" style="width:20px;height:20px;">LinkedIn</a>
-            <a href="https://twitter.com/the_DarrenSeet" target="_blank" rel="noopener"><img src="images/icons/twitter.svg" style="width:20px;height:18px;">Twitter</a>
-            <a href="https://www.facebook.com/darren.seet.104" target="_blank" rel="noopener"><img src="images/icons/facebook.svg" style="width:20px;height:18px;">Facebook</a>
-            <a href="mailto:7072070@gmail.com"><img src="images/icons/email.svg" style="width:28px;height:17px;">Email</a>
+            <div class="row">
+              <div class="col">
+                <h4>Step #3</h4>
+                <p>I have yet to think of what to put in this box, If you have any suggestions, feel free to contact me.</p>
+                <a href="#" class="btn">Don't click!</a>
+              </div>
+              <div class="col">
+                <h4>Step #4</h4>
+                <p>I have yet to think of what to put in this box, If you have any suggestions, feel free to contact me.</p>
+                <a href="#" class="btn">Don't click!</a>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <div id="aboutDialog" title="About me" class="dialog">
-            <ul>
-                <li>BCs Computer Science at University of Warwick (2019-2022)</li>
-                    <ul>
-                      <li><a href="https://www.youtube.com/watch?v=LCXna6ljZUA" target="_blank" rel="noopener"><img src="images/icons/youtube.svg" style="width:24px;height:20px;">Recreating Pong</a><br>(Module: Computer Organization and Architecture <br> Worked with a partner)</li>
-                    </ul>
-                <br>
-                <li>Hobbies and Interests: 
-                    <ul>
-                        <li>Reading <a href="https://www.goodreads.com/user/show/98771501-darren" target="_blank" rel="noopener"><img src="images/icons/goodreads.svg" style="width:32px; height:16px;">(Goodreads Profile)</a></li>
-                        <li>Investing</li>
-                        <li>Self Improvement</li>
-                    </ul>
-                </li>
-            </ul>
+      </nav>
+      <footer>
+        <div class="footer">
+          <div class="footerText">
+            <h5>DARRENSEET</h5>
+            <p>&copy; 2020, Seet Wei Shen Darren</p>
+          </div>
+          <div class="footerRow">
+            <div class="first">
+              <div class="footerCol">
+                <a href="https://darrenseet.com/resume">Resume</a>
+              </div>
+              <div class="footerCol">
+                <p>|</p>
+              </div>
+              <div class="footerCol">
+                <a href="https://darrenseet.com/blog">Blog</a>
+              </div>
+              <div class="footerCol">
+                <p>|</p>
+              </div>
+              <div class="footerCol">
+                <a href="mailto:7072070@gmail.com">Email</a>
+              </div>
+            </div>
+            <div class="second">
+              <p>Follow me around the web &mdash; </p>
+              <a href="https://twitter.com/the_DarrenSeet" target="_blank" rel="noopener"><img src="images/icons/twitter.svg"></a>
+              <a href="https://www.linkedin.com/in/darren-seet-73a004129/" target="_blank" rel="noopener"><img src="images/icons/linkedin.svg"></a>
+              <a href="https://www.facebook.com/darren.seet.104" target="_blank" rel="noopener"><img src="images/icons/facebook.svg"></a>
+              <a href="https://instagram.com" target="_blank" rel="noopener"><img src="images/icons/instagram.svg"></a>
+              <a href="https://www.youtube.com/channel/UChUPaeDHG446TWl3As0pQiQ?view_as=subscriber" target="_blank" rel="noopener"><img src="images/icons/youtube.svg"></a>
+              <a href="https://github.com/SpliceReborn" target="_blank" rel="noopener"><img src="images/icons/github.svg"></a>
+            </div>
+          </div>
         </div>
-
+      </footer>
     </body>
-
 </html>
