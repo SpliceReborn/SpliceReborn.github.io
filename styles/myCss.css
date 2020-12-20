@@ -220,4 +220,58 @@ a + a {
   margin-left: 1em;
 }
 
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 10px;
+  }
+  p {
+    font-size: 1em;
+  }
+  .aboutContainer {
+    padding: 1em 2em;
+  }
+  .aboutText {
+    width: 100%;
+    text-align: center;
+  }
+  .aboutText p {
+    padding-top: 0;
+  }
+  .aboutImage {
+    width: 0;
+  }
+  .navContainer {
+    width: 100%;
+  }
+  .row {
+    flex-direction: column;
+  }
+  .col {
+    width:100%;
+  }
 
+  /* footer */
+  .footerText {
+    width: 40%;
+  }
+  .footerRow {
+    width: 40%;
+  }
+  .first {
+    flex-direction: column;
+    align-items: center;
+  }
+  .first p {
+    display: none; 
+  }
+  .footerCol {
+    padding-left: 1em;
+    padding-bottom: 0.3em;
+  }
+  .footerCol + .footerCol {
+    padding-left: 1em;
+  }
+  .second p {
+    display: none;
+  }
+}
