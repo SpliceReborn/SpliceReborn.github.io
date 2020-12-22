@@ -19,6 +19,7 @@ text-align: center;
 
 .landingContainer p {
   color: rgb(0, 75, 145);
+  padding: 0 20%;
 }
 
 .aboutContainer {
@@ -226,6 +227,9 @@ a + a {
   }
   p {
     font-size: 1em;
+  }
+  .landingContainer p {
+    padding: 0;
   }
   .aboutContainer {
     padding: 1em 2em;
