@@ -284,5 +284,49 @@ a + a {
   }
   .second p {
     display: none;
+  } 
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  .landingContainer {
+    background-color: #071A2B;
+  }
+
+  .landingContainer p {
+    color: #4a7fd4;
+  }
+
+  .aboutContainer, .footer {
+    background-color: #2d3944;
+  }
+
+  .aboutContainer h2{
+    color: black;
+  }
+
+  .aboutContainer p, .footer p {
+    color: #80878d;
+  }
+
+  .footer img {
+    filter: invert(1) hue-rotate(145deg);
+  }
+
+  .footerRow a {
+    color: #80878d;
+  }
+
+  .footerRow a:hover {
+    color: #a3a3a3;
+  }
+
+  .btn {
+    border-color: #4a7fd4;
+  }
+
+  .btn:hover {
+    background-color: #2d3944;
+    color: #80878d;
   }
 }
