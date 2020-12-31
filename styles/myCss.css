@@ -221,12 +221,35 @@ a + a {
   margin-left: 1em;
 }
 
+/* To be added to dark mode and phone css */
+
+.blogContainer a {
+  text-decoration: none;
+  color:rgb(143, 197, 248);
+}
+
+.blogContainer h4 {
+  text-decoration: underline;
+}
+
+.blogContainer h4, ul {
+  text-align: left;
+  padding-left: 10%;
+}
+
+.blogContainer li {
+  color:rgb(143, 197, 248);
+  font-size: 1em;
+}
+
+
+
 @media screen and (max-width: 800px) {
   body {
     font-size: 10px;
   }
   p {
-    font-size: 1em;
+    font-size: 1.1em;
   }
   .landingContainer p {
     padding: 0;
@@ -290,7 +313,7 @@ a + a {
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
   .landingContainer {
-    background-color: #071A2B;
+    background-color: #192e41;
   }
 
   .landingContainer p {
@@ -298,7 +321,7 @@ a + a {
   }
 
   .aboutContainer, .footer {
-    background-color: #2d3944;
+    background-color: #3b454e;
   }
 
   .aboutContainer h2{
