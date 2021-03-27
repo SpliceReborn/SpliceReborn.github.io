@@ -222,7 +222,7 @@ a + a {
 }
 
 /* To be added to dark mode and phone css */
-
+/*
 .blogContainer a {
   text-decoration: none;
   color:rgb(143, 197, 248);
@@ -241,6 +241,7 @@ a + a {
   color:rgb(143, 197, 248);
   font-size: 1em;
 }
+*/
 
 
 
@@ -310,7 +311,7 @@ a + a {
   } 
 }
 
-/* Dark mode */
+/* Dark mode 
 @media (prefers-color-scheme: dark) {
   .landingContainer {
     background-color: #192e41;
@@ -353,3 +354,4 @@ a + a {
     color: #80878d;
   }
 }
+*/
