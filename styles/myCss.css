@@ -229,9 +229,17 @@ code {
 .infoContainer1 {
   padding: 1em 15%;
   text-align: left;
-  }
+}
   
-.infoContainer1 p {
+
+.infoContainer2 {
+  padding: 1em 15%;
+  text-align: left;
+  background-color: lightgoldenrodyellow;
+  padding: 1em 15%;
+}
+  
+.infoContainer2 li {
   color: rgb(0, 75, 145);
 }
 
