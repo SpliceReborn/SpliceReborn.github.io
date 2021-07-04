@@ -30,8 +30,13 @@
             <p>This diary documents what I have learned from the book. It is by no means a detailed summary of the book, but instead short notes for things 
                 I have learned as a beginner in JavaScript. This will not include basic programming concepts as I have some previous experience in programming.
             </p>
+            <p>
+              You can follow along the contents of this book through the online ebook found <a href="https://eloquentjavascript.net/">here</a>.
+            </p>
             <h3>Jump Ahead!</h3>
             <a href="#">Day 1</a>
+            <a href="#">Day 2</a>
+            <a href="#">Day 3</a>
           </div>
           <div class="aboutImage">
             <img src="images/eloquent.jpg" alt="Front cover of Eloquent JavaScript by Marijn Haverbeke">
@@ -61,7 +66,30 @@
         <div class="infoContainer1">
           <h4>Day 3</h4>
           <ul>
-            <li> Page 54 & 55 - Functions and Side Effects:
+            <li> <strong>Rest Parameters:</strong>
+              <ul>
+                <li>To accept any number of arguments, add <code>...</code> before the parameter name when defining the function.</li>
+                <li>For example, function max(...numbers) will accept any amount of arguments which can be accessed in the form of an array.</li>
+                <li>Calling the function <code>max(2,4,7)</code> will result in <code>numbers = [2,4,7]</code> inside the function scope.</li>
+                <li>Another scenario where this might be useful is to spread another array into new array: 
+                  <code>words = ["never", "fully"]</code>, <code>console.log(["will", ...words, "understand"])</code> => ["will", "never", "fully", "understand"]
+                </li>                  
+              </ul>
+            </li>
+            <li> <strong>JSON(JavaScript Object Notation):</strong> 
+              <ul>
+                <li>Used as data storage and communication format on the web</li>
+                <li>similar to JavaScript's arrays and objects but
+                  <ol>
+                    <li> All properties names have to be surrounded by double quotes</li>
+                    <li> Only simple data expressions, no function calls/bindings/computation</li>
+                    <li> Comments not allowed </li>
+                  </ol>
+                </li>
+                <li><code>JSON.stringify</code> converts data to JSON, while <code>JSON.parse</code> converts data from JSON</li>
+              </ul>
+            </li>
+            <li> <strong>Page 54 & 55 - Functions and Side Effects:</strong>
               <ul>
                 <li>Some operations are also easier to express in an efficient way when we use side effects, so computing speed can be a reason 
                   to avoid functions with no side effects and don't rely on side effects from other code (pure functions)</li>
