@@ -1,0 +1,14 @@
+{
+  "name": "dailyhighlightdose",
+  "version": "1.0.0",
+  "description": "a web application that requests for your highlights and email a random one(or more) to you everyday",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Seet Wei Shen Darren",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^4.1.0"
+  }
+}
