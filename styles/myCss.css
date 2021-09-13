@@ -37,6 +37,12 @@ justify-content: space-evenly;
   padding-top: 5%;
   color: rgb(0, 75, 145);
 }
+.gameText{
+  width:90% 
+}
+.gameText li{
+  color:rgb(0, 75, 145)
+}
 
 .aboutImage {
   width: 20%;
