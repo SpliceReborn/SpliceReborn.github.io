@@ -98,6 +98,12 @@ li {
   justify-content: space-evenly;
 }
 
+.grid-container {
+  display: grid;
+  grid-auto-flow: column;
+  height: 100%;
+}
+
 
 .btn {
   display: inline-block;
