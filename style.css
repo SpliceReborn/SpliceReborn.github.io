@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'Noto Serif', serif;
+}
+
+.header {
+    display: none;
+}
+
+.title-container {
+    min-height: 550px;
+    background-color: #B4ECB0;
+    background-image: url("./images/portraitmain2.png");
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title-text {
+    width: 40%;
+}
+
+.title-hey {
+    margin-left: 1.4em;
+    font-size: 1.5em;
+}
+
+.title-name {
+    margin-left: 1.05em;
+    font-size: 2em;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-title {
+    margin-top: 1em;
+}
+
+.about-text {
+    margin: 1em 2.5em 2.5em 2.5em;
+}
+
+.flex-heading-list {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1em 0em;
+}
+
+.flex-heading-list--heading {
+    flex-basis: 25%;
+}
+
+.flex-heading-list--list {
+    flex-basis: 60%;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(#d4aeae, #dcb18b);
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.projects hr {
+    margin: 0.5em 2em; 
+    width: 80%;
+    background-color: black;
+}
+
+.projects-title {
+    margin-top: 1em;
+    line-height: 1.2em;
+}
+
+.project {
+    margin-bottom: 0.5em;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+    .projects .project--separator {
+        margin: 0em;
+        width: 90%;
+    }
+
+    .project--title {
+        margin: 1em 0.4em 0.5em 0.4em;
+        text-align: center;
+    }
+
+    .project--container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+        .project--container--link {
+            width: 80%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .project--container--link--img {
+            margin: 0.5em;
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+        }
+
+        .project--container--text {
+            margin: 0.5em 1.5em;
+        }
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    .footer-title {
+        margin-top: 1em;
+    }
+
+    .footer hr {
+        margin: 0.5em 2em; 
+        width: 80%;
+        background-color: black;
+    }
+
+    .footer p {
+        display: flex;
+        align-items: center;
+        gap: 3px;
+        margin: 1.5em;
+    }
+
+    .footer img {
+        width: 24px;
+        height: 24px;
+    }
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) {
+    .title-text {
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: 992px) {
+    .title-container {
+        background-position:  right 5em bottom 0;
+    }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    @media (min-width: 992px) {
+        .title-container {
+            background-position:  right 15em bottom 0;
+        }
+    }
+}
