@@ -4,7 +4,7 @@
 }
 
 body {
-    font-family: 'Noto Serif', serif;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .header {
@@ -70,8 +70,6 @@ body {
     flex-direction: column;
     align-items: center;
     background: linear-gradient(#d4aeae, #dcb18b);
-    font-family: 'Roboto', sans-serif;
-
 }
 
 .projects hr {
