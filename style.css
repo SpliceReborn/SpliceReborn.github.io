@@ -12,9 +12,11 @@ body {
     height: 100vh;
 }
 
-h1 {
+h1, h1 > span {
     font-size: 6vw;
     background: linear-gradient(to right, rgb(67, 124, 205), rgb(163, 208, 255));
+    background-clip: text;
+    color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
