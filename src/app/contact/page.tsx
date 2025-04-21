@@ -198,8 +198,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-medium">Email</h4>
-                    <a href="mailto:hello@darrenseet.com" className="text-muted-foreground hover:text-primary">
-                      hello@darrenseet.com
+                    <a href="mailto:darren@darrenseet.com" className="text-muted-foreground hover:text-primary">
+                      darren@darrenseet.com
                     </a>
                   </div>
                 </div>
@@ -210,7 +210,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-medium">Location</h4>
-                    <p className="text-muted-foreground">San Francisco, California</p>
+                    <p className="text-muted-foreground">Kuala Lumpur, Malaysia</p>
                   </div>
                 </div>
                 
@@ -222,6 +222,22 @@ export default function Contact() {
                     <h4 className="font-medium">Trailblazer Profile</h4>
                     <a href="https://trailblazer.me/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
                       trailblazer.me/id/darrenseet
+                    </a>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <svg className="text-primary w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                      <line x1="8" y1="21" x2="16" y2="21"></line>
+                      <line x1="12" y1="17" x2="12" y2="21"></line>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-medium">Company</h4>
+                    <a href="https://www.kliqxe.com/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
+                      Kliqxe
                     </a>
                   </div>
                 </div>
@@ -258,7 +274,7 @@ export default function Contact() {
               <div className="space-y-2">
                 <div className="flex justify-between">
                   <span>Monday - Friday</span>
-                  <span>9:00 AM - 5:00 PM PST</span>
+                  <span>9:00 AM - 5:00 PM MYT</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Saturday - Sunday</span>

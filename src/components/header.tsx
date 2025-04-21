@@ -11,7 +11,7 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/projects", label: "Projects" },
-  { href: "/blog", label: "Blog" },
+  // { href: "/blog", label: "Blog" }, // Temporarily removed - uncomment to restore blog functionality
   { href: "/contact", label: "Contact" },
 ];
 
@@ -30,7 +30,7 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-      <div className="container flex items-center justify-between h-16 px-4 md:px-6">
+      <div className="container mx-auto flex items-center justify-between h-16 px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2">
           <span className="text-xl font-bold font-mono gradient-text">DS</span>
         </Link>
@@ -88,7 +88,7 @@ export default function Header() {
             transition={{ duration: 0.3 }}
             className="md:hidden"
           >
-            <div className="container px-4 py-4 flex flex-col space-y-4 bg-background border-b border-border">
+            <div className="container mx-auto px-4 py-4 flex flex-col space-y-4 bg-background border-b border-border">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
