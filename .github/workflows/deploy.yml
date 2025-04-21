@@ -26,10 +26,14 @@ jobs:
       - name: Build 🔨
         run: npm run build
 
-      - name: Create .nojekyll file 📄
-        run: touch out/.nojekyll
+      - name: Prepare for deployment 📄
+        run: |
+          touch out/.nojekyll
+          cp README.md out/
+          cp CNAME out/  # Ensures the custom domain setting persists
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: out 
+          clean: true  # Automatically remove deleted files from the deploy branch 
