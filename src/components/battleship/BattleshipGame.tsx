@@ -386,68 +386,158 @@ export default function BattleshipGame() {
     let position: number;
     let attempts = 0;
     
-    // First priority: target squares adjacent to hits that aren't already hit or missed
-    const targetAdjacentToHits = () => {
-      // Get all positions that have been hit
+    // Find consecutive hits that might be part of the same ship
+    const findShipDirection = () => {
       const hitPositions = [...computerHits];
       
-      // For each hit position, check its adjacent cells (up, right, down, left)
-      for (const hitPos of hitPositions) {
-        const row = Math.floor(hitPos / BOARD_SIZE);
-        const col = hitPos % BOARD_SIZE;
+      // Check for consecutive hits
+      for (const hit1 of hitPositions) {
+        const row1 = Math.floor(hit1 / BOARD_SIZE);
+        const col1 = hit1 % BOARD_SIZE;
         
-        // Check adjacent cells: up, right, down, left (no diagonals)
-        const adjacentPositions = [];
-        
-        // Up
-        if (row > 0) {
-          adjacentPositions.push(hitPos - BOARD_SIZE);
-        }
-        // Right
-        if (col < BOARD_SIZE - 1) {
-          adjacentPositions.push(hitPos + 1);
-        }
-        // Down
-        if (row < BOARD_SIZE - 1) {
-          adjacentPositions.push(hitPos + BOARD_SIZE);
-        }
-        // Left
-        if (col > 0) {
-          adjacentPositions.push(hitPos - 1);
-        }
-        
-        // Filter out positions that have already been hit or missed
-        const validTargets = adjacentPositions.filter(
-          pos => !computerHits.includes(pos) && !computerMisses.includes(pos)
-        );
-        
-        if (validTargets.length > 0) {
-          // Return a random valid adjacent position
-          return validTargets[Math.floor(Math.random() * validTargets.length)];
+        // Look for another hit adjacent to this one
+        for (const hit2 of hitPositions) {
+          if (hit1 === hit2) continue;
+          
+          const row2 = Math.floor(hit2 / BOARD_SIZE);
+          const col2 = hit2 % BOARD_SIZE;
+          
+          // Check if these hits are adjacent (horizontally or vertically)
+          const isAdjacent = (
+            // Horizontal adjacency
+            (row1 === row2 && Math.abs(col1 - col2) === 1) ||
+            // Vertical adjacency
+            (col1 === col2 && Math.abs(row1 - row2) === 1)
+          );
+          
+          if (isAdjacent) {
+            // Found adjacent hits - determine if horizontal or vertical
+            const isHorizontal = row1 === row2;
+            
+            // Check the next positions in line
+            const possibleTargets = [];
+            
+            if (isHorizontal) {
+              // Check left and right from the line of hits
+              const minCol = Math.min(col1, col2);
+              const maxCol = Math.max(col1, col2);
+              
+              // Try leftmost position
+              if (minCol > 0) {
+                const leftPos = row1 * BOARD_SIZE + (minCol - 1);
+                if (!computerHits.includes(leftPos) && !computerMisses.includes(leftPos)) {
+                  possibleTargets.push(leftPos);
+                }
+              }
+              
+              // Try rightmost position
+              if (maxCol < BOARD_SIZE - 1) {
+                const rightPos = row1 * BOARD_SIZE + (maxCol + 1);
+                if (!computerHits.includes(rightPos) && !computerMisses.includes(rightPos)) {
+                  possibleTargets.push(rightPos);
+                }
+              }
+            } else {
+              // Check up and down from the line of hits
+              const minRow = Math.min(row1, row2);
+              const maxRow = Math.max(row1, row2);
+              
+              // Try upmost position
+              if (minRow > 0) {
+                const upPos = (minRow - 1) * BOARD_SIZE + col1;
+                if (!computerHits.includes(upPos) && !computerMisses.includes(upPos)) {
+                  possibleTargets.push(upPos);
+                }
+              }
+              
+              // Try bottom position
+              if (maxRow < BOARD_SIZE - 1) {
+                const downPos = (maxRow + 1) * BOARD_SIZE + col1;
+                if (!computerHits.includes(downPos) && !computerMisses.includes(downPos)) {
+                  possibleTargets.push(downPos);
+                }
+              }
+            }
+            
+            if (possibleTargets.length > 0) {
+              return possibleTargets[Math.floor(Math.random() * possibleTargets.length)];
+            }
+          }
         }
       }
       
       return null;
     };
     
-    // Try to find an intelligent target
-    const intelligentTarget = targetAdjacentToHits();
+    // First priority: try to find a ship's direction based on multiple hits
+    const linearTarget = findShipDirection();
     
-    if (intelligentTarget !== null) {
-      position = intelligentTarget;
+    if (linearTarget !== null) {
+      position = linearTarget;
     } else {
-      // Fall back to random targeting if no intelligent targets are available
-      do {
-        position = Math.floor(Math.random() * (BOARD_SIZE * BOARD_SIZE));
-        attempts++;
+      // First priority: target squares adjacent to hits that aren't already hit or missed
+      const targetAdjacentToHits = () => {
+        // Get all positions that have been hit
+        const hitPositions = [...computerHits];
         
-        // Prevent infinite loop
-        if (attempts > 100) {
-          setMessage("Computer couldn't find a valid move!");
-          setCurrentTurn('player');
-          return;
+        // For each hit position, check its adjacent cells (up, right, down, left)
+        for (const hitPos of hitPositions) {
+          const row = Math.floor(hitPos / BOARD_SIZE);
+          const col = hitPos % BOARD_SIZE;
+          
+          // Check adjacent cells: up, right, down, left (no diagonals)
+          const adjacentPositions = [];
+          
+          // Up
+          if (row > 0) {
+            adjacentPositions.push(hitPos - BOARD_SIZE);
+          }
+          // Right
+          if (col < BOARD_SIZE - 1) {
+            adjacentPositions.push(hitPos + 1);
+          }
+          // Down
+          if (row < BOARD_SIZE - 1) {
+            adjacentPositions.push(hitPos + BOARD_SIZE);
+          }
+          // Left
+          if (col > 0) {
+            adjacentPositions.push(hitPos - 1);
+          }
+          
+          // Filter out positions that have already been hit or missed
+          const validTargets = adjacentPositions.filter(
+            pos => !computerHits.includes(pos) && !computerMisses.includes(pos)
+          );
+          
+          if (validTargets.length > 0) {
+            // Return a random valid adjacent position
+            return validTargets[Math.floor(Math.random() * validTargets.length)];
+          }
         }
-      } while (computerHits.includes(position) || computerMisses.includes(position));
+        
+        return null;
+      };
+      
+      // Try to find an intelligent target
+      const intelligentTarget = targetAdjacentToHits();
+      
+      if (intelligentTarget !== null) {
+        position = intelligentTarget;
+      } else {
+        // Fall back to random targeting if no intelligent targets are available
+        do {
+          position = Math.floor(Math.random() * (BOARD_SIZE * BOARD_SIZE));
+          attempts++;
+          
+          // Prevent infinite loop
+          if (attempts > 100) {
+            setMessage("Computer couldn't find a valid move!");
+            setCurrentTurn('player');
+            return;
+          }
+        } while (computerHits.includes(position) || computerMisses.includes(position));
+      }
     }
     
     // Check if hit or miss

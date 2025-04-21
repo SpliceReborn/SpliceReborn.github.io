@@ -272,26 +272,6 @@ export default function Contact() {
                 </a>
               </div>
             </div>
-            
-            <div className="bg-primary/10 rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-3">Office Hours</h3>
-              <p className="text-muted-foreground mb-4">
-                I&apos;m generally available during the following hours:
-              </p>
-              <div className="space-y-2">
-                <div className="flex justify-between">
-                  <span>Monday - Friday</span>
-                  <span>9:00 AM - 5:00 PM MYT</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Saturday - Sunday</span>
-                  <span>Closed</span>
-                </div>
-              </div>
-              <p className="text-sm text-muted-foreground mt-4">
-                I typically respond to emails within 24-48 business hours.
-              </p>
-            </div>
           </motion.div>
         </div>
       </div>
