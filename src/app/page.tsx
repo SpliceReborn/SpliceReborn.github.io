@@ -123,7 +123,7 @@ export default function Home() {
                   Battleship Game
                 </h3>
                 <p className="text-muted-foreground mb-4">
-                  A modern implementation of the classic Battleship game built with JavaScript and deployed on Heroku. Features include AI opponent, multiplayer mode, and responsive design.
+                  A modern implementation of the classic Battleship game built with JavaScript. Features include AI opponent, multiplayer mode, and responsive design.
                 </p>
                 <div className="flex flex-wrap gap-2">
                   <span className="text-xs px-2 py-1 bg-secondary rounded-full">JavaScript</span>

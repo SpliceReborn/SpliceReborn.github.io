@@ -4,19 +4,18 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { FiGithub, FiExternalLink, FiSearch } from "react-icons/fi";
+import { FiGithub, FiSearch } from "react-icons/fi";
 
 // Project data
 const projects = [
   {
     id: "battleship",
     title: "Battleship Game",
-    description: "A modern implementation of the classic Battleship game built with JavaScript and deployed on Heroku. Features include AI opponent, multiplayer mode, and responsive design for desktop and mobile play.",
+    description: "A modern implementation of the classic Battleship game built with JavaScript. Features include AI opponent, multiplayer mode, and responsive design for desktop and mobile play.",
     image: "/images/battleship.png",
-    tags: ["JavaScript", "HTML/CSS", "Heroku", "Game Development"],
+    tags: ["JavaScript", "HTML/CSS", "Game Development"],
     links: {
-      demo: "https://battleship-game.herokuapp.com",
-      code: "https://github.com/SpliceReborn/battleship-game"
+      code: "https://github.com/SpliceReborn/FYP"
     },
     featured: true
   }
@@ -121,16 +120,6 @@ export default function Projects() {
                         ))}
                       </div>
                       <div className="flex gap-4">
-                        {project.links.demo && (
-                          <Link
-                            href={project.links.demo}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1 text-sm text-primary hover:underline"
-                          >
-                            Live Demo <FiExternalLink size={14} />
-                          </Link>
-                        )}
                         {project.links.code && (
                           <Link
                             href={project.links.code}
@@ -151,24 +140,6 @@ export default function Projects() {
                 <p className="text-muted-foreground text-lg">No projects found matching your criteria. Try adjusting your search.</p>
               </div>
             )}
-          </div>
-        </div>
-      </section>
-      
-      {/* Call to Action */}
-      <section className="py-16 bg-primary/10">
-        <div className="container px-4 md:px-6 mx-auto">
-          <div className="flex flex-col items-center text-center space-y-6 max-w-2xl mx-auto">
-            <h2 className="text-3xl font-bold tracking-tight">Interested in working together?</h2>
-            <p className="text-xl text-muted-foreground">
-              I&apos;m always open to discussing new projects or Salesforce implementation opportunities.
-            </p>
-            <Link 
-              href="/contact" 
-              className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors text-lg"
-            >
-              Get in touch
-            </Link>
           </div>
         </div>
       </section>

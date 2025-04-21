@@ -47,14 +47,21 @@ export default function Contact() {
   return (
     <section className="pt-10 pb-16">
       <div className="container px-4 md:px-6 mx-auto">
-        <div className="max-w-3xl mx-auto text-center mb-10">
+        <div className="max-w-4xl mx-auto text-center mb-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
+            className="bg-primary/10 py-10 px-6 md:px-12 rounded-lg border border-primary/20"
           >
-            <h1 className="text-4xl font-bold mb-4">Get In Touch</h1>
-            <p className="text-xl text-muted-foreground">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact</h1>
+            <p className="text-xl text-muted-foreground mb-6">
+              Feel free to reach out!
+            </p>
+            <h2 className="text-2xl md:text-3xl font-semibold mb-5 gradient-text">
+              Get in touch
+            </h2>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
               Have a question or interested in discussing tech, hobby projects, or just want to say hi? I&apos;d love to hear from you!
             </p>
           </motion.div>
