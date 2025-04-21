@@ -5,8 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { FiGithub, FiExternalLink, FiSearch } from "react-icons/fi";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
 
 // Project data
 const projects = [
@@ -103,11 +101,9 @@ export default function Projects() {
   });
 
   return (
-    <main className="min-h-screen flex flex-col">
-      <Header />
-      
-      <section className="pt-32 pb-16">
-        <div className="container px-4 md:px-6">
+    <>
+      <section className="pt-10 pb-16">
+        <div className="container px-4 md:px-6 mx-auto">
           <div className="max-w-3xl mx-auto text-center mb-10">
             <h1 className="text-4xl font-bold mb-4">My Projects</h1>
             <p className="text-xl text-muted-foreground">
@@ -221,7 +217,7 @@ export default function Projects() {
       
       {/* Call to Action */}
       <section className="py-16 bg-primary/10">
-        <div className="container px-4 md:px-6">
+        <div className="container px-4 md:px-6 mx-auto">
           <div className="flex flex-col items-center text-center space-y-6 max-w-2xl mx-auto">
             <h2 className="text-3xl font-bold tracking-tight">Interested in working together?</h2>
             <p className="text-xl text-muted-foreground">
@@ -236,8 +232,6 @@ export default function Projects() {
           </div>
         </div>
       </section>
-      
-      <Footer />
-    </main>
+    </>
   );
 } 

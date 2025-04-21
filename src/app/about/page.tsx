@@ -5,8 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { FiDownload, FiExternalLink } from "react-icons/fi";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
 
 const skills = [
   { category: "Salesforce", items: ["Apex", "LWC", "Aura", "SOQL", "SOSL", "Visualforce", "Experience Cloud"] },
@@ -61,11 +59,9 @@ const certifications = [
 
 export default function About() {
   return (
-    <main className="min-h-screen flex flex-col">
-      <Header />
-      
-      <section className="pt-32 pb-10">
-        <div className="container px-4 md:px-6">
+    <>
+      <section className="pt-10 pb-10">
+        <div className="container px-4 md:px-6 mx-auto">
           <div className="flex flex-col md:flex-row gap-12 items-start">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -137,7 +133,7 @@ export default function About() {
       
       {/* Skills Section */}
       <section className="py-16 bg-secondary/5">
-        <div className="container px-4 md:px-6">
+        <div className="container px-4 md:px-6 mx-auto">
           <div className="space-y-4 text-center mb-10">
             <h2 className="text-3xl font-bold">Skills & Expertise</h2>
             <p className="text-xl text-muted-foreground">
@@ -171,7 +167,7 @@ export default function About() {
       
       {/* Experience Section */}
       <section className="py-16">
-        <div className="container px-4 md:px-6">
+        <div className="container px-4 md:px-6 mx-auto">
           <div className="space-y-4 text-center mb-10">
             <h2 className="text-3xl font-bold">Work Experience</h2>
             <p className="text-xl text-muted-foreground">
@@ -211,7 +207,7 @@ export default function About() {
       
       {/* Certifications Section */}
       <section className="py-16 bg-secondary/5">
-        <div className="container px-4 md:px-6">
+        <div className="container px-4 md:px-6 mx-auto">
           <div className="space-y-4 text-center mb-10">
             <h2 className="text-3xl font-bold">Certifications</h2>
             <p className="text-xl text-muted-foreground">
@@ -251,8 +247,6 @@ export default function About() {
           </div>
         </div>
       </section>
-      
-      <Footer />
-    </main>
+    </>
   );
 } 
