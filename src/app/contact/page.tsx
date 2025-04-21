@@ -242,7 +242,7 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-medium">Company</h4>
+                    <h4 className="font-medium">Works at</h4>
                     <a href="https://www.kliqxe.com/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
                       Kliqxe
                     </a>
