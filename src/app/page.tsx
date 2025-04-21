@@ -65,10 +65,10 @@ export default function Home() {
           <div className="p-6 border rounded-lg bg-card hover:border-primary transition-colors">
             <h3 className="font-medium mb-3">Salesforce</h3>
             <ul className="space-y-1 text-sm text-muted-foreground">
-              <li>• Apex Development</li>
-              <li>• Lightning Web Components</li>
-              <li>• Experience Cloud</li>
+              <li>• Apex Development & LWCs</li>
               <li>• Integration Services</li>
+              <li>• Manufacturing & Revenue Cloud</li>
+              <li>• Agentforce</li>
             </ul>
           </div>
           

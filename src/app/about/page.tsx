@@ -124,15 +124,23 @@ export default function About() {
               
               <div className="space-y-4 text-lg text-muted-foreground">
                 <p>
-                  Hello! I&apos;m Darren, a Salesforce Developer with over 3 years of experience architecting and implementing 
-                  enterprise solutions on the Salesforce platform. I specialize in developing sophisticated customizations for 
-                  Sales & Service Cloud, Experience Cloud, Manufacturing Cloud, and building scalable integration solutions with external systems.
+                  Hello! I&apos;m Darren, a Salesforce Developer with over 3 years of experience architecting 
+                  and implementing enterprise solutions on the Salesforce platform.
                 </p>
                 <p>
-                  My technical expertise includes designing complex Apex triggers and batch processing systems, developing 
-                  Lightning Web Components with advanced JavaScript frameworks, and creating robust integrations with ERPs such as SAP 
-                  using tools like Overcast, Mulesoft, and custom middleware. I implement efficient data models and automation 
-                  solutions that optimize business processes and enhance data flow across organizations.
+                  I specialize in developing sophisticated customizations for Sales & Service Cloud, 
+                  Experience Cloud, Manufacturing Cloud, and building scalable integration solutions 
+                  with external systems.
+                </p>
+                <p>
+                  My technical expertise includes designing complex Apex triggers and batch processing systems, 
+                  developing Lightning Web Components with advanced JavaScript frameworks, and creating 
+                  robust integrations with ERPs such as SAP.
+                </p>
+                <p>
+                  I implement efficient data models and automation solutions using tools like 
+                  Overcast, Mulesoft, and custom middleware that optimize business processes 
+                  and enhance data flow across organizations.
                 </p>
               </div>
               
@@ -154,7 +162,7 @@ export default function About() {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="flex-1 w-full max-w-md mx-auto md:max-w-none"
+              className="w-full max-w-xs mx-auto md:max-w-sm"
             >
               <div className="relative aspect-[3/4] w-full overflow-hidden rounded-lg border shadow-lg">
                 <Image 
