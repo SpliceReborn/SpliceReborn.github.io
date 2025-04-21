@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { FiArrowRight, FiDownload } from "react-icons/fi";
 
 export default function Home() {
@@ -9,14 +8,9 @@ export default function Home() {
     <div className="container mx-auto px-4 py-16 md:py-24">
       {/* Hero Section */}
       <section className="flex flex-col md:flex-row gap-10 mb-20 items-center">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="flex-1 space-y-6"
-        >
+        <div className="flex-1 space-y-6">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-            Hi, I'm <span className="gradient-text">Darren Seet</span>
+            Hi, I&apos;m <span className="gradient-text">Darren Seet</span>
           </h1>
           <h2 className="text-2xl md:text-3xl text-muted-foreground font-medium">
             Salesforce Developer & Tech Enthusiast
@@ -41,17 +35,12 @@ export default function Home() {
               Download CV <FiDownload />
             </Link>
           </div>
-        </motion.div>
+        </div>
         
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="flex-1 w-full max-w-md mx-auto md:max-w-none"
-        >
+        <div className="flex-1 w-full max-w-md mx-auto md:max-w-none">
           <div className="relative aspect-square w-full overflow-hidden rounded-lg border shadow-lg">
             <Image 
-              src="/images/profile.jpg" 
+              src="/images/rightimage.jpg" 
               alt="Darren Seet" 
               fill 
               style={{ objectFit: "cover" }} 
@@ -59,16 +48,11 @@ export default function Home() {
               priority
             />
           </div>
-        </motion.div>
+        </div>
       </section>
 
       {/* Skills Section */}
-      <motion.section 
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.3 }}
-        className="mb-20"
-      >
+      <section className="mb-20">
         <div className="text-center mb-10">
           <h2 className="text-3xl font-bold">Skills & Expertise</h2>
           <p className="text-muted-foreground mt-2">Technologies I work with</p>
@@ -115,14 +99,10 @@ export default function Home() {
             </ul>
           </div>
         </div>
-      </motion.section>
+      </section>
 
       {/* Featured Projects Section */}
-      <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.4 }}
-      >
+      <section>
         <div className="text-center mb-10">
           <h2 className="text-3xl font-bold">Featured Projects</h2>
           <p className="text-muted-foreground mt-2">Some of my recent work</p>
@@ -174,7 +154,7 @@ export default function Home() {
             View all projects <FiArrowRight />
           </Link>
         </div>
-      </motion.section>
+      </section>
     </div>
   );
 }
