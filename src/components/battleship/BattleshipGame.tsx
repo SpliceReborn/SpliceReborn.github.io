@@ -382,22 +382,73 @@ export default function BattleshipGame() {
   const computerMove = () => {
     if (gameState !== 'playing' || currentTurn !== 'computer') return;
     
-    // Simple AI logic
+    // Enhanced AI logic
     let position: number;
     let attempts = 0;
     
-    // Try to find a valid position to attack
-    do {
-      position = Math.floor(Math.random() * (BOARD_SIZE * BOARD_SIZE));
-      attempts++;
+    // First priority: target squares adjacent to hits that aren't already hit or missed
+    const targetAdjacentToHits = () => {
+      // Get all positions that have been hit
+      const hitPositions = [...computerHits];
       
-      // Prevent infinite loop
-      if (attempts > 100) {
-        setMessage("Computer couldn't find a valid move!");
-        setCurrentTurn('player');
-        return;
+      // For each hit position, check its adjacent cells (up, right, down, left)
+      for (const hitPos of hitPositions) {
+        const row = Math.floor(hitPos / BOARD_SIZE);
+        const col = hitPos % BOARD_SIZE;
+        
+        // Check adjacent cells: up, right, down, left (no diagonals)
+        const adjacentPositions = [];
+        
+        // Up
+        if (row > 0) {
+          adjacentPositions.push(hitPos - BOARD_SIZE);
+        }
+        // Right
+        if (col < BOARD_SIZE - 1) {
+          adjacentPositions.push(hitPos + 1);
+        }
+        // Down
+        if (row < BOARD_SIZE - 1) {
+          adjacentPositions.push(hitPos + BOARD_SIZE);
+        }
+        // Left
+        if (col > 0) {
+          adjacentPositions.push(hitPos - 1);
+        }
+        
+        // Filter out positions that have already been hit or missed
+        const validTargets = adjacentPositions.filter(
+          pos => !computerHits.includes(pos) && !computerMisses.includes(pos)
+        );
+        
+        if (validTargets.length > 0) {
+          // Return a random valid adjacent position
+          return validTargets[Math.floor(Math.random() * validTargets.length)];
+        }
       }
-    } while (computerHits.includes(position) || computerMisses.includes(position));
+      
+      return null;
+    };
+    
+    // Try to find an intelligent target
+    const intelligentTarget = targetAdjacentToHits();
+    
+    if (intelligentTarget !== null) {
+      position = intelligentTarget;
+    } else {
+      // Fall back to random targeting if no intelligent targets are available
+      do {
+        position = Math.floor(Math.random() * (BOARD_SIZE * BOARD_SIZE));
+        attempts++;
+        
+        // Prevent infinite loop
+        if (attempts > 100) {
+          setMessage("Computer couldn't find a valid move!");
+          setCurrentTurn('player');
+          return;
+        }
+      } while (computerHits.includes(position) || computerMisses.includes(position));
+    }
     
     // Check if hit or miss
     const targetShipName = playerBoard[position];

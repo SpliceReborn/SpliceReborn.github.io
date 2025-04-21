@@ -135,21 +135,23 @@ export default function GameBoard({
         gridTemplateRows: `repeat(${boardSize}, 1fr)`
       }}
     >
-      {board.map((value, position) => {
-        const previewPositions = getPreviewPositions(position);
-        const cellClass = getCellClass(position, value, previewPositions);
-        
-        return (
-          <div
-            key={position}
-            id={`cell-${position}`}
-            className={cellClass}
-            onClick={() => handleCellClick(position)}
-            onMouseEnter={() => handleMouseEnter(position)}
-            data-position={position}
-          />
-        );
-      })}
+      <div className={styles.boardGrid}>
+        {board.map((value, position) => {
+          const previewPositions = getPreviewPositions(position);
+          const cellClass = getCellClass(position, value, previewPositions);
+          
+          return (
+            <div
+              key={position}
+              id={`cell-${position}`}
+              className={cellClass}
+              onClick={() => handleCellClick(position)}
+              onMouseEnter={() => handleMouseEnter(position)}
+              data-position={position}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 } 
