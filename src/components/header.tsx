@@ -11,6 +11,7 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/projects", label: "Projects" },
+  { href: "/battleship", label: "Battleship" },
   // { href: "/blog", label: "Blog" }, // Temporarily removed - uncomment to restore blog functionality
   { href: "/contact", label: "Contact" },
 ];

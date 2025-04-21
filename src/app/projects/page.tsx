@@ -130,6 +130,14 @@ export default function Projects() {
                             Source Code <FiGithub size={14} />
                           </Link>
                         )}
+                        {project.id === 'battleship' && (
+                          <Link
+                            href="/battleship"
+                            className="inline-flex items-center gap-1 text-sm text-primary hover:underline"
+                          >
+                            Play Game
+                          </Link>
+                        )}
                       </div>
                     </div>
                   </div>
