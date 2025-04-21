@@ -9,7 +9,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-background border-t border-border py-8">
-      <div className="container px-4 md:px-6">
+      <div className="container px-4 md:px-6 mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="space-y-4">
             <h3 className="text-lg font-semibold gradient-text">Darren Seet</h3>

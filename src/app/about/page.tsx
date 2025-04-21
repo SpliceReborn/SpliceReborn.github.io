@@ -1,16 +1,48 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { FiDownload, FiExternalLink } from "react-icons/fi";
-import { FaSalesforce } from "react-icons/fa";
 
 const skills = [
-  { category: "Salesforce", items: ["Apex", "LWC", "Aura", "SOQL", "SOSL", "Visualforce", "Experience Cloud"] },
-  { category: "Frontend", items: ["JavaScript", "TypeScript", "React", "HTML/CSS", "Tailwind CSS"] },
-  { category: "Backend", items: ["Node.js", "Express", "REST API", "Integration Services"] },
-  { category: "Tools", items: ["Git", "VS Code", "Salesforce CLI", "GitHub Actions", "Heroku"] },
+  { 
+    category: "Salesforce", 
+    items: [
+      "Sales & Service Cloud",
+      "Manufacturing Cloud",
+      "Experience Cloud",
+      "Revenue Cloud"
+    ] 
+  },
+  { 
+    category: "Integration", 
+    items: [
+      "Mulesoft",
+      "Overcast",
+      "REST",
+      "Integration with SAP"
+    ] 
+  },
+  { 
+    category: "External", 
+    items: [
+      "JavaScript",
+      "React",
+      "Node.js",
+      "API Development"
+    ] 
+  },
+  { 
+    category: "Tools", 
+    items: [
+      "Git & GitHub",
+      "VS Code",
+      "Salesforce CLI",
+      "GitHub Actions"
+    ] 
+  },
 ];
 
 const experiences = [
@@ -38,14 +70,36 @@ const experiences = [
   }
 ];
 
+// Map certification names to their corresponding image files
 const certifications = [
-  "Manufacturing Cloud Accredited Professional",
-  "Salesforce Certified Agentforce Specialist",
-  "Salesforce Certified Platform Developer I",
-  "Salesforce Certified JavaScript Developer I",
-  "Salesforce Certified Administrator",
-  "Salesforce Certified Associate",
-  "Salesforce Certified AI Associate"
+  {
+    name: "Manufacturing Cloud Accredited Professional",
+    image: "/images/certs/2021-04_PLC-AP-Badge_Manufacturing_Cloud_High-Res.png"
+  },
+  {
+    name: "Salesforce Certified Agentforce Specialist",
+    image: "/images/certs/2025-02_Badge_SF-Certified_Agentforce-Specialist_High-Res.png"
+  },
+  {
+    name: "Salesforce Certified Platform Developer I",
+    image: "/images/certs/2021-03_Badge_SF-Certified_Platform-Developer-I_High-Res.png"
+  },
+  {
+    name: "Salesforce Certified JavaScript Developer I",
+    image: "/images/certs/2021-03_Badge_SF-Certified_JavaScript-Developer-I_High-Res.png"
+  },
+  {
+    name: "Salesforce Certified Administrator",
+    image: "/images/certs/2021-03_Badge_SF-Certified_Administrator_High-Res.png"
+  },
+  {
+    name: "Salesforce Certified Associate",
+    image: "/images/certs/2022-08_Badge_SF-Certified_Associate_High-Res.png"
+  },
+  {
+    name: "Salesforce Certified AI Associate",
+    image: "/images/certs/2023-07_Badge_SF-Certified_AI-Associate_High-Res.png"
+  }
 ];
 
 export default function About() {
@@ -69,24 +123,14 @@ export default function About() {
               
               <div className="space-y-4 text-lg text-muted-foreground">
                 <p>
-                  Hello! I&apos;m Darren, a Salesforce Developer with over 7 years of experience in designing and implementing 
-                  custom solutions on the Salesforce platform. I&apos;m passionate about leveraging technology to solve complex 
-                  business problems and deliver exceptional user experiences.
+                  Hello! I&apos;m Darren, a Salesforce Developer with over 3 years of experience in designing and implementing 
+                  custom solutions on the Salesforce platform. I specialize in developing and implementing Sales & Service Cloud,
+                  Experience Cloud, Manufacturing Cloud, and integration solutions with external systems.
                 </p>
                 <p>
-                  My journey in the Salesforce ecosystem has allowed me to work on diverse projects across various 
-                  industries, from financial services to healthcare and retail. I specialize in Apex development, 
-                  Lightning Web Components, and integration services, constantly staying updated with the latest 
-                  platform enhancements and best practices.
-                </p>
-                <p>
-                  Beyond Salesforce, I&apos;m interested in all things tech – from web development and cloud computing to 
-                  emerging technologies like artificial intelligence and blockchain. I enjoy learning new skills and 
-                  applying them to create innovative solutions.
-                </p>
-                <p>
-                  When I&apos;m not coding, you can find me exploring new hiking trails, reading sci-fi novels, or experimenting 
-                  with home cooking recipes.
+                  My expertise includes integrating Salesforce with ERPs such as SAP, using tools like Overcast and Mulesoft.
+                  I work with REST APIs to create seamless connections between systems, enhancing data flow and business processes
+                  across the organization.
                 </p>
               </div>
               
@@ -108,8 +152,14 @@ export default function About() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="flex-1 w-full max-w-md mx-auto md:max-w-none"
             >
-              <div className="relative aspect-[3/4] w-full overflow-hidden rounded-lg border shadow-lg bg-primary/10 flex items-center justify-center">
-                <FaSalesforce className="text-9xl text-primary" />
+              <div className="relative aspect-[3/4] w-full overflow-hidden rounded-lg border shadow-lg">
+                <Image 
+                  src="/images/LatestPortrait.jpeg" 
+                  alt="Darren Seet" 
+                  fill 
+                  style={{ objectFit: "cover" }} 
+                  className="hover:scale-105 transition-transform duration-500"
+                />
               </div>
             </motion.div>
           </div>
@@ -209,11 +259,16 @@ export default function About() {
                 transition={{ duration: 0.3, delay: index * 0.1 }}
                 className="bg-background rounded-lg border p-6 flex items-center gap-4 hover:border-primary transition-all"
               >
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <FaSalesforce className="text-2xl text-primary" />
+                <div className="w-16 h-16 flex-shrink-0 relative">
+                  <Image 
+                    src={cert.image}
+                    alt={cert.name}
+                    fill
+                    style={{ objectFit: "contain" }}
+                  />
                 </div>
                 <div>
-                  <span className="font-medium">{cert}</span>
+                  <span className="font-medium">{cert.name}</span>
                   <p className="text-xs text-muted-foreground mt-1">Salesforce</p>
                 </div>
               </motion.div>
