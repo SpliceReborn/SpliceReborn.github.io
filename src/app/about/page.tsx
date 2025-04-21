@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { FiDownload, FiExternalLink } from "react-icons/fi";
+import { FaSalesforce } from "react-icons/fa";
 
 const skills = [
   { category: "Salesforce", items: ["Apex", "LWC", "Aura", "SOQL", "SOSL", "Visualforce", "Experience Cloud"] },
@@ -15,46 +15,37 @@ const skills = [
 
 const experiences = [
   {
-    title: "Senior Salesforce Developer",
-    company: "TechCorp Solutions",
-    period: "2020 - Present",
-    description: [
-      "Lead developer for multiple enterprise Salesforce implementations",
-      "Designed and built custom Lightning Web Components for improved user experience",
-      "Implemented complex integration solutions with external systems",
-      "Mentored junior developers and conducted code reviews"
-    ]
-  },
-  {
     title: "Salesforce Developer",
-    company: "CloudTech Inc.",
-    period: "2017 - 2020",
+    company: "Kliqxe",
+    period: "May 2023 - Present • 2 yrs",
     description: [
-      "Developed custom Apex solutions for business process automation",
-      "Created Visualforce pages and controllers for client-facing applications",
-      "Worked on data migration projects and established best practices",
-      "Collaborated with business analysts to refine requirements"
+      "Developed custom Salesforce solutions for clients across various industries",
+      "Built Lightning Web Components and Aura components for enhanced user experiences",
+      "Implemented integration solutions with external systems using REST and SOAP APIs",
+      "Created automation using Apex, Flows, and Process Builder"
     ]
   },
   {
-    title: "Junior Developer",
-    company: "Digital Solutions",
-    period: "2015 - 2017",
+    title: "Graduate Trainee",
+    company: "Kliqxe",
+    period: "Nov 2022 - May 2023 • 7 mos",
     description: [
       "Assisted in Salesforce configuration and customization",
+      "Learned Salesforce development best practices",
       "Built reports and dashboards for executive stakeholders",
-      "Performed data cleansing and validation tasks",
-      "Gained experience in Apex programming and Salesforce administration"
+      "Gained practical experience in Apex programming and Salesforce administration"
     ]
   }
 ];
 
 const certifications = [
-  "Salesforce Certified Platform Developer II",
-  "Salesforce Certified Platform Developer I", 
+  "Manufacturing Cloud Accredited Professional",
+  "Salesforce Certified Agentforce Specialist",
+  "Salesforce Certified Platform Developer I",
+  "Salesforce Certified JavaScript Developer I",
   "Salesforce Certified Administrator",
-  "Salesforce Certified Platform App Builder",
-  "Salesforce Certified Service Cloud Consultant"
+  "Salesforce Certified Associate",
+  "Salesforce Certified AI Associate"
 ];
 
 export default function About() {
@@ -117,14 +108,8 @@ export default function About() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="flex-1 w-full max-w-md mx-auto md:max-w-none"
             >
-              <div className="relative aspect-[3/4] w-full overflow-hidden rounded-lg border shadow-lg">
-                <Image 
-                  src="/images/rightimage.jpg" 
-                  alt="Darren Seet" 
-                  fill 
-                  style={{ objectFit: "cover" }} 
-                  className="hover:scale-105 transition-transform duration-500"
-                />
+              <div className="relative aspect-[3/4] w-full overflow-hidden rounded-lg border shadow-lg bg-primary/10 flex items-center justify-center">
+                <FaSalesforce className="text-9xl text-primary" />
               </div>
             </motion.div>
           </div>
@@ -215,29 +200,29 @@ export default function About() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {certifications.map((cert, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
-                className="bg-background rounded-lg border p-6 flex items-center gap-4"
+                className="bg-background rounded-lg border p-6 flex items-center gap-4 hover:border-primary transition-all"
               >
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                  </svg>
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <FaSalesforce className="text-2xl text-primary" />
                 </div>
-                <span className="font-medium">{cert}</span>
+                <div>
+                  <span className="font-medium">{cert}</span>
+                  <p className="text-xs text-muted-foreground mt-1">Salesforce</p>
+                </div>
               </motion.div>
             ))}
           </div>
           
           <div className="text-center mt-10">
             <Link
-              href="https://trailblazer.me/"
+              href="https://www.salesforce.com/trailblazer/darrenseetkliqxe"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center text-primary hover:underline gap-1"

@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { FiArrowRight, FiDownload } from "react-icons/fi";
 
@@ -38,15 +37,8 @@ export default function Home() {
         </div>
         
         <div className="flex-1 w-full max-w-md mx-auto md:max-w-none">
-          <div className="relative aspect-square w-full overflow-hidden rounded-lg border shadow-lg">
-            <Image 
-              src="/images/rightimage.jpg" 
-              alt="Darren Seet" 
-              fill 
-              style={{ objectFit: "cover" }} 
-              className="hover:scale-105 transition-transform duration-500"
-              priority
-            />
+          <div className="relative aspect-square w-full overflow-hidden rounded-lg border shadow-lg bg-primary/10 flex items-center justify-center">
+            <div className="text-6xl font-bold text-primary">DS</div>
           </div>
         </div>
       </section>
@@ -105,41 +97,23 @@ export default function Home() {
       <section>
         <div className="text-center mb-10">
           <h2 className="text-3xl font-bold">Featured Projects</h2>
-          <p className="text-muted-foreground mt-2">Some of my recent work</p>
+          <p className="text-muted-foreground mt-2">Check out my work</p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="max-w-2xl mx-auto">
           <Link href="/projects" className="group">
             <div className="border rounded-lg overflow-hidden bg-card hover:border-primary transition-colors">
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
-                  Salesforce Customer Portal
+                  Battleship Game
                 </h3>
                 <p className="text-muted-foreground mb-4">
-                  Custom Experience Cloud portal with advanced analytics dashboard and integration with external systems.
+                  A modern implementation of the classic Battleship game built with JavaScript and deployed on Heroku. Features include AI opponent, multiplayer mode, and responsive design.
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  <span className="text-xs px-2 py-1 bg-secondary rounded-full">Apex</span>
-                  <span className="text-xs px-2 py-1 bg-secondary rounded-full">LWC</span>
-                  <span className="text-xs px-2 py-1 bg-secondary rounded-full">Integration</span>
-                </div>
-              </div>
-            </div>
-          </Link>
-          
-          <Link href="/projects" className="group">
-            <div className="border rounded-lg overflow-hidden bg-card hover:border-primary transition-colors">
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
-                  Portfolio Website
-                </h3>
-                <p className="text-muted-foreground mb-4">
-                  Modern, responsive portfolio website built with Next.js and Tailwind CSS with dark mode support.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="text-xs px-2 py-1 bg-secondary rounded-full">Next.js</span>
-                  <span className="text-xs px-2 py-1 bg-secondary rounded-full">TypeScript</span>
-                  <span className="text-xs px-2 py-1 bg-secondary rounded-full">Tailwind</span>
+                  <span className="text-xs px-2 py-1 bg-secondary rounded-full">JavaScript</span>
+                  <span className="text-xs px-2 py-1 bg-secondary rounded-full">HTML/CSS</span>
+                  <span className="text-xs px-2 py-1 bg-secondary rounded-full">Game Development</span>
                 </div>
               </div>
             </div>
@@ -151,7 +125,7 @@ export default function Home() {
             href="/projects" 
             className="inline-flex items-center gap-2 text-primary hover:underline"
           >
-            View all projects <FiArrowRight />
+            View project details <FiArrowRight />
           </Link>
         </div>
       </section>

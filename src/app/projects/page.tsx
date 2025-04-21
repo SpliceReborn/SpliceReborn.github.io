@@ -9,30 +9,6 @@ import { FiGithub, FiExternalLink, FiSearch } from "react-icons/fi";
 // Project data
 const projects = [
   {
-    id: "quiz",
-    title: "Salesforce Certification Quiz App",
-    description: "An interactive quiz application built with Lightning Web Components to help users prepare for Salesforce certification exams. Features include timed quizzes, result tracking, and personalized study recommendations.",
-    image: "/images/quiz.png",
-    tags: ["Salesforce", "LWC", "Apex", "UI/UX"],
-    links: {
-      demo: "https://www.salesforce.com",
-      code: "https://github.com/SpliceReborn/quiz-app"
-    },
-    featured: true
-  },
-  {
-    id: "phonebook",
-    title: "Phonebook Management System",
-    description: "A comprehensive contact management solution developed on the Salesforce platform. The app utilizes Lightning Web Components to provide a responsive and intuitive interface for managing contacts, with advanced search and filtering capabilities.",
-    image: "/images/phonebook.png",
-    tags: ["Salesforce", "LWC", "SOQL", "REST API"],
-    links: {
-      demo: "https://www.salesforce.com",
-      code: "https://github.com/SpliceReborn/phonebook-app"
-    },
-    featured: true
-  },
-  {
     id: "battleship",
     title: "Battleship Game",
     description: "A modern implementation of the classic Battleship game built with JavaScript and deployed on Heroku. Features include AI opponent, multiplayer mode, and responsive design for desktop and mobile play.",
@@ -43,47 +19,11 @@ const projects = [
       code: "https://github.com/SpliceReborn/battleship-game"
     },
     featured: true
-  },
-  {
-    id: "data-visualization",
-    title: "Salesforce Data Visualization",
-    description: "A data visualization dashboard that transforms Salesforce data into actionable insights using charts, graphs, and interactive elements. Built with Lightning Web Components and Chart.js.",
-    image: "/images/portraitmain2.png",
-    tags: ["Salesforce", "LWC", "Chart.js", "Data Analysis"],
-    links: {
-      demo: "https://www.salesforce.com",
-      code: "https://github.com/SpliceReborn/data-viz"
-    },
-    featured: false
-  },
-  {
-    id: "e-commerce",
-    title: "E-Commerce Integration",
-    description: "An integration solution connecting Salesforce with Shopify to synchronize product data, inventory, orders, and customer information in real-time. Implemented using Apex and Salesforce Integration Services.",
-    image: "/images/portraitmain2.png",
-    tags: ["Salesforce", "Integration", "Apex", "E-Commerce"],
-    links: {
-      demo: "https://www.salesforce.com",
-      code: "https://github.com/SpliceReborn/ecommerce-integration"
-    },
-    featured: false
-  },
-  {
-    id: "community-portal",
-    title: "Customer Community Portal",
-    description: "A self-service portal built using Salesforce Experience Cloud that enables customers to access knowledge articles, submit and track cases, and manage their account details.",
-    image: "/images/portraitmain2.png",
-    tags: ["Salesforce", "Experience Cloud", "Communities", "Customer Service"],
-    links: {
-      demo: "https://www.salesforce.com",
-      code: "https://github.com/SpliceReborn/community-portal"
-    },
-    featured: false
   }
 ];
 
 // Categories for filtering
-const allCategories = ["All", "Salesforce", "LWC", "Integration", "JavaScript", "UI/UX"];
+const allCategories = ["All", "JavaScript", "HTML/CSS", "Game Development"];
 
 export default function Projects() {
   const [searchTerm, setSearchTerm] = useState("");
