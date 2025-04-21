@@ -10,10 +10,14 @@ export default function Home() {
       <section className="mb-20 -mx-4 sm:-mx-6 md:-mx-8 lg:-mx-12 xl:-mx-16 relative">
         <div className="relative w-full h-[500px] overflow-hidden rounded-lg shadow-xl">
           <Image 
-            src="/images/Banner.jpeg" 
+            src="/images/Banner.webp" 
             alt="Darren Seet - Salesforce Developer" 
             fill
             priority
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+            quality={75}
+            placeholder="blur"
+            blurDataURL="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiM0MjQyNDIiLz48L3N2Zz4="
             style={{ objectFit: "cover", objectPosition: "center" }}
             className="brightness-[0.85]"
           />

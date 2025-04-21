@@ -34,6 +34,12 @@ export default function RootLayout({
         <meta httpEquiv="cache-control" content="no-cache" />
         <meta httpEquiv="expires" content="0" />
         <meta httpEquiv="pragma" content="no-cache" />
+        <link
+          rel="preload"
+          href="/images/Banner.webp"
+          as="image"
+          type="image/webp"
+        />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ThemeProvider

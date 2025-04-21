@@ -2,7 +2,10 @@
 const nextConfig = {
   output: 'export',
   images: {
-    unoptimized: true,
+    unoptimized: false,
+    formats: ['image/webp'],
+    remotePatterns: [],
+    minimumCacheTTL: 60,
   },
 };
 
