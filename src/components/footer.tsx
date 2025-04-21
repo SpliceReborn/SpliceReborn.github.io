@@ -64,26 +64,27 @@ export default function Footer() {
                   Projects
                 </Link>
               </li>
+              {/*
               <li>
                 <Link href="/blog" className="text-muted-foreground hover:text-primary transition-colors">
                   Blog
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Salesforce Expertise</h3>
             <ul className="space-y-2">
-              <li className="text-muted-foreground">Apex Development</li>
-              <li className="text-muted-foreground">Lightning Web Components</li>
-              <li className="text-muted-foreground">Integration Services</li>
-              <li className="text-muted-foreground">Admin & Customization</li>
+              <li className="text-muted-foreground">Apex Development & LWCs</li>
+              <li className="text-muted-foreground">Integration Servives</li>
+              <li className="text-muted-foreground">Manufacturing & Revenue Cloud</li>
+              <li className="text-muted-foreground">Agentforce</li>
             </ul>
           </div>
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Contact</h3>
             <p className="text-muted-foreground">
-              Want to discuss a project or just say hi? Feel free to reach out!
+              Feel free to reach out!
             </p>
             <Link 
               href="/contact" 

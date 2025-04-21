@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   title: "Darren Seet - Salesforce Developer",
   description: "Darren Seet's portfolio - Salesforce Developer",
   icons: {
-    icon: '/favicon.ico',
+    icon: '/images/favicon.ico',
   },
 };
 

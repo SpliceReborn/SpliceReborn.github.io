@@ -1,46 +1,55 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { FiArrowRight /*, FiDownload */ } from "react-icons/fi";
 
 export default function Home() {
   return (
     <div className="container mx-auto px-4 py-16 md:py-24">
-      {/* Hero Section */}
-      <section className="flex flex-col md:flex-row gap-10 mb-20 items-center">
-        <div className="flex-1 space-y-6">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-            Hi, I&apos;m <span className="gradient-text">Darren Seet</span>
-          </h1>
-          <h2 className="text-2xl md:text-3xl text-muted-foreground font-medium">
-            Salesforce Developer & Tech Enthusiast
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-xl">
-            I build custom solutions on the Salesforce platform and create responsive web applications 
-            with modern technologies. Passionate about delivering clean code and exceptional user experiences.
-          </p>
-          <div className="flex flex-wrap gap-4 pt-4">
-            <Link 
-              href="/about" 
-              className="inline-flex items-center gap-2 px-5 py-3 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors"
-            >
-              Learn more about me <FiArrowRight />
-            </Link>
-            {/* Temporarily hidden - uncomment when CV is updated
-            <Link 
-              href="/DarrenCV.pdf" 
-              className="inline-flex items-center gap-2 px-5 py-3 border border-border rounded-md hover:bg-secondary transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Download CV <FiDownload />
-            </Link>
-            */}
-          </div>
-        </div>
-        
-        <div className="flex-1 w-full max-w-md mx-auto md:max-w-none">
-          <div className="relative aspect-square w-full overflow-hidden rounded-lg border shadow-lg bg-primary/10 flex items-center justify-center">
-            <div className="text-6xl font-bold text-primary">DS</div>
+      {/* Hero Section with Banner */}
+      <section className="mb-20 -mx-4 sm:-mx-6 md:-mx-8 lg:-mx-12 xl:-mx-16 relative">
+        <div className="relative w-full h-[500px] overflow-hidden rounded-lg shadow-xl">
+          <Image 
+            src="/images/Banner.jpeg" 
+            alt="Darren Seet - Salesforce Developer" 
+            fill
+            priority
+            style={{ objectFit: "cover", objectPosition: "center" }}
+            className="brightness-[0.85]"
+          />
+          
+          {/* Text Overlay */}
+          <div className="absolute inset-0 flex items-center justify-end">
+            <div className="w-full md:w-1/2 p-8 md:p-12 mr-0 md:mr-8 lg:mr-16 bg-background/80 backdrop-blur-sm rounded-lg shadow-lg">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4">
+                Hi, I&apos;m <span className="gradient-text">Darren Seet</span>
+              </h1>
+              <h2 className="text-2xl md:text-3xl text-foreground font-medium mb-4">
+                Salesforce Developer & Tech Enthusiast
+              </h2>
+              <p className="text-lg text-muted-foreground mb-6">
+                I build custom solutions on the Salesforce platform and create responsive web applications 
+                with modern technologies. Passionate about delivering clean code and exceptional user experiences.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Link 
+                  href="/about" 
+                  className="inline-flex items-center gap-2 px-5 py-3 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors"
+                >
+                  Learn more about me <FiArrowRight />
+                </Link>
+                {/* Temporarily hidden - uncomment when CV is updated
+                <Link 
+                  href="/DarrenCV.pdf" 
+                  className="inline-flex items-center gap-2 px-5 py-3 border border-border rounded-md hover:bg-secondary transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Download CV <FiDownload />
+                </Link>
+                */}
+              </div>
+            </div>
           </div>
         </div>
       </section>
