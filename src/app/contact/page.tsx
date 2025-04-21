@@ -55,7 +55,7 @@ export default function Contact() {
           >
             <h1 className="text-4xl font-bold mb-4">Get In Touch</h1>
             <p className="text-xl text-muted-foreground">
-              Have a question or want to work together? I&apos;d love to hear from you!
+              Have a question or interested in discussing tech, hobby projects, or just want to say hi? I&apos;d love to hear from you!
             </p>
           </motion.div>
         </div>
@@ -145,7 +145,7 @@ export default function Contact() {
                     required
                     rows={5}
                     className="w-full rounded-md border border-input bg-background py-2 px-3 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                    placeholder="Tell me about your project, question, or just say hi!"
+                    placeholder="Share your thoughts, questions about tech, or just say hello!"
                   />
                 </div>
                 

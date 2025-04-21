@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { FiArrowRight, FiDownload } from "react-icons/fi";
+import { FiArrowRight /*, FiDownload */ } from "react-icons/fi";
 
 export default function Home() {
   return (
@@ -25,6 +25,7 @@ export default function Home() {
             >
               Learn more about me <FiArrowRight />
             </Link>
+            {/* Temporarily hidden - uncomment when CV is updated
             <Link 
               href="/DarrenCV.pdf" 
               className="inline-flex items-center gap-2 px-5 py-3 border border-border rounded-md hover:bg-secondary transition-colors"
@@ -33,6 +34,7 @@ export default function Home() {
             >
               Download CV <FiDownload />
             </Link>
+            */}
           </div>
         </div>
         

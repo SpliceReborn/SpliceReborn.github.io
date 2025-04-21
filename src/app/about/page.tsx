@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { FiDownload, FiExternalLink } from "react-icons/fi";
+import { /* FiDownload, */ FiExternalLink } from "react-icons/fi";
 
 const skills = [
   { 
@@ -51,10 +51,11 @@ const experiences = [
     company: "Kliqxe",
     period: "May 2023 - Present • 2 yrs",
     description: [
-      "Developed custom Salesforce solutions for clients across various industries",
-      "Built Lightning Web Components and Aura components for enhanced user experiences",
-      "Implemented integration solutions with external systems using REST and SOAP APIs",
-      "Created automation using Apex, Flows, and Process Builder"
+      "Architected and implemented complex Salesforce solutions to streamline critical business processes for enterprise clients",
+      "Developed advanced Lightning Web Components and custom Apex triggers for high-volume transaction processing",
+      "Engineered robust integration solutions with SAP and other ERPs using Mulesoft, REST/SOAP APIs and custom middleware",
+      "Optimized performance through bulk processing patterns, governor limit management, and efficient SOQL query construction",
+      "Implemented complex automated approval workflows and validation rules for manufacturing and distribution clients"
     ]
   },
   {
@@ -62,10 +63,10 @@ const experiences = [
     company: "Kliqxe",
     period: "Nov 2022 - May 2023 • 7 mos",
     description: [
-      "Assisted in Salesforce configuration and customization",
-      "Learned Salesforce development best practices",
-      "Built reports and dashboards for executive stakeholders",
-      "Gained practical experience in Apex programming and Salesforce administration"
+      "Developed Apex trigger frameworks and custom automation solutions for data validation and transformation",
+      "Created analytical dashboards with complex report types for executive stakeholders",
+      "Participated in code reviews and implemented unit tests achieving over 90% code coverage",
+      "Assisted in deploying solutions through CI/CD pipelines using GitHub Actions and SFDX"
     ]
   }
 ];
@@ -123,18 +124,20 @@ export default function About() {
               
               <div className="space-y-4 text-lg text-muted-foreground">
                 <p>
-                  Hello! I&apos;m Darren, a Salesforce Developer with over 3 years of experience in designing and implementing 
-                  custom solutions on the Salesforce platform. I specialize in developing and implementing Sales & Service Cloud,
-                  Experience Cloud, Manufacturing Cloud, and integration solutions with external systems.
+                  Hello! I&apos;m Darren, a Salesforce Developer with over 3 years of experience architecting and implementing 
+                  enterprise solutions on the Salesforce platform. I specialize in developing sophisticated customizations for 
+                  Sales & Service Cloud, Experience Cloud, Manufacturing Cloud, and building scalable integration solutions with external systems.
                 </p>
                 <p>
-                  My expertise includes integrating Salesforce with ERPs such as SAP, using tools like Overcast and Mulesoft.
-                  I work with REST APIs to create seamless connections between systems, enhancing data flow and business processes
-                  across the organization.
+                  My technical expertise includes designing complex Apex triggers and batch processing systems, developing 
+                  Lightning Web Components with advanced JavaScript frameworks, and creating robust integrations with ERPs such as SAP 
+                  using tools like Overcast, Mulesoft, and custom middleware. I implement efficient data models and automation 
+                  solutions that optimize business processes and enhance data flow across organizations.
                 </p>
               </div>
               
               <div className="flex flex-wrap gap-4 pt-4">
+                {/* Temporarily hidden - uncomment when CV is updated
                 <Link 
                   href="/public/DarrenCV.pdf"
                   className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors"
@@ -143,6 +146,7 @@ export default function About() {
                 >
                   Download CV <FiDownload />
                 </Link>
+                */}
               </div>
             </motion.div>
             
