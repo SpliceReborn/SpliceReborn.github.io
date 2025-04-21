@@ -20,11 +20,23 @@ export default function Header() {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [initialized, setInitialized] = useState(false);
 
   // Avoid hydration mismatch
   useEffect(() => {
     setMounted(true);
+    // Set initialized after a short delay to ensure theme is properly applied
+    const timer = setTimeout(() => {
+      setInitialized(true);
+    }, 100);
+    return () => clearTimeout(timer);
   }, []);
+
+  const toggleTheme = () => {
+    if (initialized) {
+      setTheme(theme === "dark" ? "light" : "dark");
+    }
+  };
 
   if (!mounted) return null;
 
@@ -50,7 +62,7 @@ export default function Header() {
           ))}
           
           <button
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            onClick={toggleTheme}
             className="p-2 rounded-full bg-secondary text-secondary-foreground"
             aria-label="Toggle theme"
           >
@@ -61,7 +73,7 @@ export default function Header() {
         {/* Mobile Navigation */}
         <div className="md:hidden flex items-center">
           <button
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            onClick={toggleTheme}
             className="p-2 mr-2 rounded-full bg-secondary text-secondary-foreground"
             aria-label="Toggle theme"
           >
