@@ -73,7 +73,7 @@ export default function Contact() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="bg-background border rounded-lg p-6 md:p-8"
+            className="card bg-background border rounded-lg p-6 md:p-8"
           >
             {!isSubmitted ? (
               <form onSubmit={handleSubmit} className="space-y-5">
@@ -165,7 +165,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full inline-flex justify-center items-center gap-2 px-4 py-3 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors disabled:opacity-70"
+                  className="button w-full inline-flex justify-center items-center gap-2 px-4 py-3 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors disabled:opacity-70"
                 >
                   {isSubmitting ? "Sending..." : "Send Message"} <FiSend />
                 </button>
@@ -175,13 +175,13 @@ export default function Contact() {
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
                   <FiSend className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold">Message Sent!</h3>
+                <h3 className="text-2xl font-bold gradient-text">Message Sent!</h3>
                 <p className="text-muted-foreground">
                   Thank you for reaching out. I&apos;ll get back to you as soon as possible.
                 </p>
                 <button
                   onClick={() => setIsSubmitted(false)}
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-secondary text-secondary-foreground rounded-md hover:bg-secondary/90 transition-colors mt-4"
+                  className="button inline-flex items-center gap-2 px-4 py-2 bg-secondary text-secondary-foreground rounded-md hover:bg-secondary/90 transition-colors mt-4"
                 >
                   Send another message
                 </button>
@@ -196,8 +196,8 @@ export default function Contact() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="space-y-8"
           >
-            <div className="bg-background border rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
+            <div className="card bg-background border rounded-lg p-6">
+              <h3 className="heading-decorated text-xl font-semibold mb-4">Contact Information</h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -205,7 +205,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-medium">Email</h4>
-                    <a href="mailto:darren@darrenseet.com" className="text-muted-foreground hover:text-primary">
+                    <a href="mailto:darren@darrenseet.com" className="text-muted-foreground hover:text-primary animated-link">
                       darren@darrenseet.com
                     </a>
                   </div>
@@ -227,7 +227,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-medium">Trailblazer Profile</h4>
-                    <a href="https://trailblazer.me/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
+                    <a href="https://trailblazer.me/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary animated-link">
                       trailblazer.me/id/darrenseet
                     </a>
                   </div>
@@ -243,7 +243,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-medium">Works at</h4>
-                    <a href="https://www.kliqxe.com/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
+                    <a href="https://www.kliqxe.com/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary animated-link">
                       Kliqxe
                     </a>
                   </div>
@@ -251,14 +251,14 @@ export default function Contact() {
               </div>
             </div>
             
-            <div className="bg-background border rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Connect With Me</h3>
+            <div className="card bg-background border rounded-lg p-6">
+              <h3 className="heading-decorated text-xl font-semibold mb-4">Connect With Me</h3>
               <div className="flex flex-wrap gap-4">
                 <a
                   href="https://www.linkedin.com/in/darren-seet-73a004129/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 bg-secondary text-secondary-foreground rounded-md hover:bg-secondary/80 transition-colors"
+                  className="button flex items-center gap-2 px-4 py-2 bg-secondary text-secondary-foreground rounded-md hover:bg-secondary/80 transition-colors"
                 >
                   <FiLinkedin /> LinkedIn
                 </a>
@@ -266,7 +266,7 @@ export default function Contact() {
                   href="https://github.com/SpliceReborn"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 bg-secondary text-secondary-foreground rounded-md hover:bg-secondary/80 transition-colors"
+                  className="button flex items-center gap-2 px-4 py-2 bg-secondary text-secondary-foreground rounded-md hover:bg-secondary/80 transition-colors"
                 >
                   <FiGithub /> GitHub
                 </a>

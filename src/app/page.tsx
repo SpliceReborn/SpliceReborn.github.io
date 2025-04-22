@@ -29,7 +29,7 @@ export default function Home() {
                 Hi, I&apos;m <span className="gradient-text">Darren Seet</span>
               </h1>
               <h2 className="text-2xl md:text-3xl text-foreground font-medium mb-4">
-                Salesforce Developer & Tech Enthusiast
+                <span className="gradient-text-alt">Salesforce Developer</span> & Tech Enthusiast
               </h2>
               <p className="text-lg text-muted-foreground mb-6">
                 I build custom solutions on the Salesforce platform and create responsive web applications 
@@ -38,14 +38,14 @@ export default function Home() {
               <div className="flex flex-wrap gap-4">
                 <Link 
                   href="/about" 
-                  className="inline-flex items-center gap-2 px-5 py-3 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors"
+                  className="button inline-flex items-center gap-2 px-5 py-3 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors"
                 >
                   Learn more about me <FiArrowRight />
                 </Link>
                 {/* Temporarily hidden - uncomment when CV is updated
                 <Link 
                   href="/DarrenCV.pdf" 
-                  className="inline-flex items-center gap-2 px-5 py-3 border border-border rounded-md hover:bg-secondary transition-colors"
+                  className="button inline-flex items-center gap-2 px-5 py-3 border border-border rounded-md hover:bg-secondary transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -61,13 +61,13 @@ export default function Home() {
       {/* Skills Section */}
       <section className="mb-20">
         <div className="text-center mb-10">
-          <h2 className="text-3xl font-bold">Skills & Expertise</h2>
+          <h2 className="heading-decorated text-3xl font-bold mx-auto w-fit">Skills & Expertise</h2>
           <p className="text-muted-foreground mt-2">Technologies I work with</p>
         </div>
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div className="p-6 border rounded-lg bg-card hover:border-primary transition-colors">
-            <h3 className="font-medium mb-3">Salesforce</h3>
+          <div className="card p-6 border rounded-lg bg-card">
+            <h3 className="font-medium mb-3 gradient-text">Salesforce</h3>
             <ul className="space-y-1 text-sm text-muted-foreground">
               <li>• Apex Development & LWCs</li>
               <li>• Integration Services</li>
@@ -76,8 +76,8 @@ export default function Home() {
             </ul>
           </div>
           
-          <div className="p-6 border rounded-lg bg-card hover:border-primary transition-colors">
-            <h3 className="font-medium mb-3">Frontend</h3>
+          <div className="card p-6 border rounded-lg bg-card">
+            <h3 className="font-medium mb-3 gradient-text">Frontend</h3>
             <ul className="space-y-1 text-sm text-muted-foreground">
               <li>• React & Next.js</li>
               <li>• TypeScript</li>
@@ -86,8 +86,8 @@ export default function Home() {
             </ul>
           </div>
           
-          <div className="p-6 border rounded-lg bg-card hover:border-primary transition-colors">
-            <h3 className="font-medium mb-3">Backend</h3>
+          <div className="card p-6 border rounded-lg bg-card">
+            <h3 className="font-medium mb-3 gradient-text">Backend</h3>
             <ul className="space-y-1 text-sm text-muted-foreground">
               <li>• Node.js</li>
               <li>• Express</li>
@@ -96,8 +96,8 @@ export default function Home() {
             </ul>
           </div>
           
-          <div className="p-6 border rounded-lg bg-card hover:border-primary transition-colors">
-            <h3 className="font-medium mb-3">Tools & More</h3>
+          <div className="card p-6 border rounded-lg bg-card">
+            <h3 className="font-medium mb-3 gradient-text">Tools & More</h3>
             <ul className="space-y-1 text-sm text-muted-foreground">
               <li>• Git & GitHub</li>
               <li>• CI/CD Pipelines</li>
@@ -108,18 +108,20 @@ export default function Home() {
         </div>
       </section>
 
+      <div className="fancy-divider my-16"></div>
+
       {/* Featured Projects Section */}
       <section>
         <div className="text-center mb-10">
-          <h2 className="text-3xl font-bold">Featured Projects</h2>
+          <h2 className="heading-decorated text-3xl font-bold mx-auto w-fit">Featured Projects</h2>
           <p className="text-muted-foreground mt-2">Check out my work</p>
         </div>
         
         <div className="max-w-2xl mx-auto">
           <Link href="/projects" className="group">
-            <div className="border rounded-lg overflow-hidden bg-card hover:border-primary transition-colors">
+            <div className="card border rounded-lg overflow-hidden bg-card">
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
+                <h3 className="text-xl font-semibold mb-2 group-hover:gradient-text transition-colors">
                   Battleship Game
                 </h3>
                 <p className="text-muted-foreground mb-4">
@@ -138,7 +140,7 @@ export default function Home() {
         <div className="text-center mt-8">
           <Link 
             href="/projects" 
-            className="inline-flex items-center gap-2 text-primary hover:underline"
+            className="inline-flex items-center gap-2 text-primary hover:underline animated-link"
           >
             View project details <FiArrowRight />
           </Link>

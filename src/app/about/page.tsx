@@ -116,7 +116,7 @@ export default function About() {
               className="flex-1 space-y-6"
             >
               <div>
-                <h1 className="text-4xl font-bold mb-4">About Me</h1>
+                <h1 className="text-4xl font-bold mb-4">About <span className="gradient-text">Me</span></h1>
                 <p className="text-xl text-muted-foreground mb-6">
                   Salesforce Developer passionate about building innovative solutions
                 </p>
@@ -129,7 +129,7 @@ export default function About() {
                 </p>
                 <p>
                   I specialize in developing sophisticated customizations for Sales & Service Cloud, 
-                  Experience Cloud, Manufacturing Cloud, and building scalable integration solutions 
+                  Experience Cloud, <span className="gradient-text-alt">Manufacturing Cloud</span>, and building scalable integration solutions 
                   with external systems.
                 </p>
                 <p>
@@ -148,7 +148,7 @@ export default function About() {
                 {/* Temporarily hidden - uncomment when CV is updated
                 <Link 
                   href="/public/DarrenCV.pdf"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors"
+                  className="button inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -182,7 +182,7 @@ export default function About() {
       <section className="py-16 bg-secondary/5">
         <div className="container px-4 md:px-6 mx-auto">
           <div className="space-y-4 text-center mb-10">
-            <h2 className="text-3xl font-bold">Skills & Expertise</h2>
+            <h2 className="heading-decorated text-3xl font-bold mx-auto w-fit">Skills & Expertise</h2>
             <p className="text-xl text-muted-foreground">
               Technologies and tools I work with
             </p>
@@ -195,9 +195,9 @@ export default function About() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-background rounded-lg border p-6 space-y-4"
+                className="card bg-background rounded-lg border p-6 space-y-4"
               >
-                <h3 className="text-xl font-semibold">{skillGroup.category}</h3>
+                <h3 className="text-xl font-semibold gradient-text">{skillGroup.category}</h3>
                 <ul className="space-y-2">
                   {skillGroup.items.map((skill, idx) => (
                     <li key={idx} className="flex items-center gap-2">
@@ -212,11 +212,13 @@ export default function About() {
         </div>
       </section>
       
+      <div className="fancy-divider container mx-auto px-4 md:px-6"></div>
+      
       {/* Experience Section */}
       <section className="py-16">
         <div className="container px-4 md:px-6 mx-auto">
           <div className="space-y-4 text-center mb-10">
-            <h2 className="text-3xl font-bold">Work Experience</h2>
+            <h2 className="heading-decorated text-3xl font-bold mx-auto w-fit">Work Experience</h2>
             <p className="text-xl text-muted-foreground">
               My professional journey so far
             </p>
@@ -237,7 +239,7 @@ export default function About() {
                     <h3 className="text-xl font-bold">{exp.title}</h3>
                     <span className="text-muted-foreground">{exp.period}</span>
                   </div>
-                  <p className="text-lg text-primary">{exp.company}</p>
+                  <p className="text-lg gradient-text">{exp.company}</p>
                   <ul className="mt-4 space-y-2">
                     {exp.description.map((item, idx) => (
                       <li key={idx} className="text-muted-foreground">
@@ -256,7 +258,7 @@ export default function About() {
       <section className="py-16 bg-secondary/5">
         <div className="container px-4 md:px-6 mx-auto">
           <div className="space-y-4 text-center mb-10">
-            <h2 className="text-3xl font-bold">Certifications</h2>
+            <h2 className="heading-decorated text-3xl font-bold mx-auto w-fit">Certifications</h2>
             <p className="text-xl text-muted-foreground">
               Professional accreditations and qualifications
             </p>

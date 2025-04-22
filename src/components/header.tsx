@@ -54,7 +54,7 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className={`text-sm font-medium transition-colors hover:text-primary ${
+              className={`text-sm font-medium transition-colors animated-link ${
                 pathname === link.href ? "text-primary" : "text-muted-foreground"
               }`}
             >
@@ -64,7 +64,7 @@ export default function Header() {
           
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-full bg-secondary text-secondary-foreground"
+            className="p-2 rounded-full bg-secondary text-secondary-foreground hover:bg-secondary/80"
             aria-label="Toggle theme"
           >
             {theme === "dark" ? <FiSun size={18} /> : <FiMoon size={18} />}
@@ -75,7 +75,7 @@ export default function Header() {
         <div className="md:hidden flex items-center">
           <button
             onClick={toggleTheme}
-            className="p-2 mr-2 rounded-full bg-secondary text-secondary-foreground"
+            className="p-2 mr-2 rounded-full bg-secondary text-secondary-foreground hover:bg-secondary/80"
             aria-label="Toggle theme"
           >
             {theme === "dark" ? <FiSun size={18} /> : <FiMoon size={18} />}
@@ -83,7 +83,7 @@ export default function Header() {
           
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="p-2 rounded-full bg-secondary text-secondary-foreground"
+            className="p-2 rounded-full bg-secondary text-secondary-foreground hover:bg-secondary/80"
             aria-label="Toggle menu"
           >
             {isMenuOpen ? <FiX size={20} /> : <FiMenu size={20} />}

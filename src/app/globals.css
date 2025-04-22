@@ -10,6 +10,17 @@
   --secondary-foreground: #111827;
   --muted-foreground: #6b7280;
   --card: #ffffff;
+  
+  /* Added vibrant accent colors */
+  --accent-1: #f472b6; /* Pink */
+  --accent-2: #4f46e5; /* Indigo */
+  --accent-3: #10b981; /* Emerald */
+  --accent-4: #f59e0b; /* Amber */
+  
+  /* Animation durations */
+  --transition-slow: 0.5s;
+  --transition-medium: 0.3s;
+  --transition-fast: 0.15s;
 }
 
 .dark {
@@ -22,6 +33,12 @@
   --secondary-foreground: #e5e7eb;
   --muted-foreground: #9ca3af;
   --card: #0f0f0f;
+  
+  /* Darker mode accent colors are brighter */
+  --accent-1: #ec4899; /* Pink */
+  --accent-2: #6366f1; /* Indigo */
+  --accent-3: #34d399; /* Emerald */
+  --accent-4: #f59e0b; /* Amber */
 }
 
 @theme inline {
@@ -37,20 +54,136 @@ body {
   font-family: var(--font-geist-sans);
 }
 
+/* Enhanced gradient text with multi-color gradient */
 .gradient-text {
-  background: linear-gradient(to right, #3b82f6, #2dd4bf);
+  background: linear-gradient(to right, var(--primary), var(--accent-3));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  transition: all var(--transition-medium) ease;
+}
+
+/* Alternate gradient text style */
+.gradient-text-alt {
+  background: linear-gradient(to right, var(--accent-1), var(--accent-2));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
 }
 
+/* Add hover effect to gradient text */
+.gradient-text:hover {
+  background: linear-gradient(to right, var(--accent-2), var(--primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  transform: translateY(-1px);
+}
+
 @media (prefers-color-scheme: dark) {
   .gradient-text {
-    background: linear-gradient(to right, #60a5fa, #34d399);
+    background: linear-gradient(to right, #60a5fa, var(--accent-3));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
   }
+}
+
+/* Typography Enhancements */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: 2.5rem;
+  letter-spacing: -0.03em;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+/* Decorative heading style with bottom accent */
+.heading-decorated {
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.heading-decorated::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 3rem;
+  height: 0.25rem;
+  background: linear-gradient(to right, var(--primary), var(--accent-1));
+  border-radius: 1rem;
+  transition: width var(--transition-medium) ease;
+}
+
+.heading-decorated:hover::after {
+  width: 5rem;
+}
+
+/* Button Enhancements */
+button, .button {
+  transition: all var(--transition-medium) ease;
+}
+
+button:hover, .button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Card Enhancements */
+.card {
+  transition: transform var(--transition-medium) ease, box-shadow var(--transition-medium) ease;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Link animations */
+a {
+  position: relative;
+  transition: all var(--transition-fast) ease;
+}
+
+a.animated-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background: linear-gradient(to right, var(--primary), var(--accent-1));
+  transition: width var(--transition-medium) ease;
+}
+
+a.animated-link:hover::after {
+  width: 100%;
+}
+
+/* Section divider */
+.fancy-divider {
+  height: 5px;
+  width: 100%;
+  background: linear-gradient(to right, var(--primary), var(--accent-2), var(--accent-3), var(--accent-1));
+  margin: 2rem 0;
+  border-radius: 5px;
 }
