@@ -63,42 +63,6 @@ export default function GameBoard({
     return positions;
   };
   
-  // Determine cell class based on its state
-  const getCellClass = (position: number, value: string | null, previewPositions: number[]): string => {
-    let cellClass = styles.cell;
-    
-    // If cell is in preview positions, add preview class
-    if (previewPositions.includes(position)) {
-      cellClass += ` ${styles.preview}`;
-      
-      // Add invalid class if any preview position is invalid
-      if (previewPositions.some(pos => {
-        const row = Math.floor(pos / boardSize);
-        const col = pos % boardSize;
-        const isAtEdge = (orientation === 'horizontal' && col + 1 >= boardSize) || 
-                          (orientation === 'vertical' && row + 1 >= boardSize);
-        return isAtEdge || board[pos] !== null;
-      })) {
-        cellClass += ` ${styles.invalid}`;
-      }
-      return cellClass;
-    }
-    
-    // Add classes based on cell content
-    if (value && !hideShips) {
-      cellClass += ` ${styles.ship} ${styles[value]}`;
-    }
-    
-    // Add hit or miss classes
-    if (hits.includes(position)) {
-      cellClass += ` ${styles.hit}`;
-    } else if (misses.includes(position)) {
-      cellClass += ` ${styles.miss}`;
-    }
-    
-    return cellClass;
-  };
-  
   // Handle cell hover for ship placement preview
   const handleMouseEnter = (position: number) => {
     if (gameState !== 'setup' || !isPlayerBoard || !selectedShip) return;
@@ -137,8 +101,21 @@ export default function GameBoard({
     >
       <div className={styles.boardGrid}>
         {board.map((value, position) => {
-          const previewPositions = getPreviewPositions(position);
-          const cellClass = getCellClass(position, value, previewPositions);
+          // Don't get preview positions during rendering - only on hover
+          // We'll handle this in the handleMouseEnter function
+          let cellClass = styles.cell;
+          
+          // Add classes based on cell content
+          if (value && !hideShips) {
+            cellClass += ` ${styles.ship} ${styles[value]}`;
+          }
+          
+          // Add hit or miss classes
+          if (hits.includes(position)) {
+            cellClass += ` ${styles.hit}`;
+          } else if (misses.includes(position)) {
+            cellClass += ` ${styles.miss}`;
+          }
           
           return (
             <div
